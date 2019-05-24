@@ -1,0 +1,259 @@
+\documentclass[a4paper,12pt,amsmath,amssymb,aps]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+% Fysik
+\usepackage{physics}
+
+% Matematik
+\usepackage{amsmath,amssymb,bm,mathtools}
+\usepackage{gensymb}
+%\usepackage{breqn}
+% Punktum i math-felter bliver til komma i pdf
+%\DeclareMathSymbol{.}{\mathord}{letters}{"3B}
+
+% SI-units
+\usepackage[number-unit-product = \text{ }, inter-unit-product =\cdot]{siunitx}
+
+% Figurer
+\usepackage{graphicx}
+\usepackage{float}
+
+% Om dokumentet
+\title{Dispositioner}
+\author{Josefine Bjørndal Robl}
+\date{\today}
+
+% Marginer
+\usepackage[tmargin=1.0in,bmargin=1in,lmargin=1.25in,rmargin=1.25in]{geometry}
+
+% Header og footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{
+    Josefine Bjørndal Robl \\
+	Aarhus Universitet - 201706760
+}
+\chead{}
+\rhead{
+	Atom- og Molekylefysik \\
+	Eksamensdispositioner
+}
+\lfoot{}
+\cfoot{}
+\rfoot{Side \thepage\ af \pageref{LastPage}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Indryk tekst efter section og subsection
+\usepackage{indentfirst}
+
+% Ingen orddeling i section og subsection titler
+\usepackage[raggedright]{titlesec}
+
+% Ligninger nummereres 1.1, 1.2 osv. i section 1 og 2.1, 2.2 osv. i section 2
+%\numberwithin{equation}{section}
+
+% Ligninger nummereres 1.1.1, 1.1.2 osv. i subsection 1 og 2.1.1, 2.1.2 osv. i subsection 2 - dog også 1.0.1 og 2.0.1 i hhv. section 1 og 2.
+%\numberwithin{equation}{subsection}
+
+% Subsections med uden at hedde f.eks. 0.1 og 0.2 (uden sections)
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Til at indsætte MATLAB kode i ShareLaTeX
+% \usepackage{listings}
+% \usepackage{color}
+%     \definecolor{codegreen}{rgb}{0,0.6,0}
+%     \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+%     \definecolor{codepurple}{rgb}{0.58,0,0.82}
+%     \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% \lstdefinestyle{mystyle}{
+%     backgroundcolor=\color{backcolour},
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{codepurple},
+%     basicstyle=\footnotesize,
+%     breakatwhitespace=false,
+%     breaklines=true,
+%     captionpos=b,
+%     keepspaces=true,
+%     numbers=left,
+%     numbersep=5pt,
+%     showspaces=false,
+%     showstringspaces=false,
+%     showtabs=false,
+%     tabsize=2
+% }
+% \lstset{style=mystyle}
+
+% Lister med bindestreg som punkt
+\renewcommand{\labelitemi}{\textendash}
+\renewcommand{\labelitemii}{\textendash}
+\renewcommand{\labelitemiii}{\textendash}
+\renewcommand{\labelitemiv}{\textendash}
+
+% Link/url - f.eks. så Table of content linker til section, subsection..., men også så url'er kan indsættes som clickable links.
+\usepackage{hyperref}
+\hypersetup{
+    allcolors=black, % No colored links
+    linktoc=all,     % "all" = both sections and subsections linked
+}
+
+% bra-ket notation
+\usepackage{braket}
+\renewcommand{\braket}{\Braket}
+
+% Limit med limits under "lim"
+\newcommand{\Lim}[2]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{{#1} \rightarrow {#2}}\;$}}}
+% Limit gående mod uendelig
+\newcommand{\Liminf}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{{#1} \rightarrow \infty}\;$}}}
+% Limit gående mod 0
+\newcommand{\Limnul}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{{#1} \rightarrow 0}\;$}}}
+
+% phi
+\renewcommand{\phi}{\varphi}
+
+% Til subfigures
+\usepackage{caption}
+\usepackage{subcaption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+% Giver mulighed for sidehoved og -fod på titelsiden
+\thispagestyle{fancy}
+
+% SKRIV HERUNDER
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\include{dispositioner/Q01}
+\include{questions/Q01}
+
+\include{dispositioner/Q02}
+\include{questions/Q02}
+
+\include{dispositioner/Q03}
+\include{questions/Q03}
+
+\include{dispositioner/Q04}
+\include{questions/Q04}
+
+\include{dispositioner/Q05}
+\include{questions/Q05}
+
+\include{dispositioner/Q06}
+\include{questions/Q06}
+
+\include{dispositioner/Q07}
+\include{questions/Q07}
+
+\include{dispositioner/Q08}
+\include{questions/Q08}
+
+\include{dispositioner/Q09}
+\include{questions/Q09}
+
+\include{dispositioner/Q10}
+\include{questions/Q10}
+
+\include{dispositioner/Q11}
+\include{questions/Q11}
+
+\include{dispositioner/Q12}
+\include{questions/Q12}
+
+\include{dispositioner/Q13}
+\include{questions/Q13}
+
+\include{dispositioner/Q14}
+\include{questions/Q14}
+
+\include{dispositioner/Q15}
+\include{questions/Q15}
+
+\include{dispositioner/Q16}
+\include{questions/Q16}
+
+\include{dispositioner/Q17}
+\include{questions/Q17}
+
+\include{dispositioner/Q18}
+\include{questions/Q18}
+
+\include{dispositioner/Q19}
+\include{questions/Q19}
+
+\include{dispositioner/Q20}
+\include{questions/Q20}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% HJÆLPENDE KOMMANDOER
+
+% FIGURER
+    % Figurnavn "?.jpg" skal være i ét ord eller med "_" (underscore) som mellemrum
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.4]{?.jpg}
+    \caption{Billedtekst}
+    \label{fig:figur X}
+\end{figure}
+
+
+% LIGNINGER
+    % ALIGN UNDER HINANDEN MED "&"
+        % Det der står efter "&" stilles under hinanden
+    \begin{align}
+    	K_B+U_B&=K_A+U_A+W_{andet} \\
+    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
+    \end{align}
+    
+    % Matricer i align
+    \begin{align}
+        \begin{bmatrix}
+            
+        \end{bmatrix}  
+    \end{align}
+    
+    % SUBEQUATIONS OG SPLIT
+        % "Subequation" giver mulighed for at undernummerere delligninger som f.eks. 1a, 1b, 1c osv..
+        % "Split" giver herudover mulighed for kun ikke at undernummerere hver eneste af ligningerne, som f.eks. i at man har to ligninger, hvor den ene er en udledning, men den kun skal have ét nummer, selvom den dækker flere linjer.
+    \begin{subequations}
+    \begin{align}
+    \begin{split} \label{eq:lign. Xa}
+    	K_B+U_B&=K_A+U_A+W_{andet} \\
+    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
+    \end{split}
+    \\
+    \begin{split} \label{eq:lign. Xb}
+    	\Leftrightarrow U&=mgy
+    \end{split}
+    \end{align}
+    \end{subequations}
+    
+    % BREAK TIL NÆSTE LINJE VED "\\"
+    \begin{align}
+    	K_B+U_B&=K_A+U_A+W_{andet} \\
+    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
+    \end{align}
+    
+    % UNDGÅ NUMMERERING AF BESTEMTE LINJER I LIGNINGEN VED "\nonumber"
+    \begin{align}
+    	K_B+U_B&=K_A+U_A+W_{andet} \nonumber
+    \end{align}
+    
+    % LABEL
+    \begin{align} \label{eq:lign. X}
+    	K_B+U_B&=K_A+U_A+W_{andet} \\
+    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
+    \end{align}
