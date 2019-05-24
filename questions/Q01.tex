@@ -1,6 +1,48 @@
-\subsection{Tekst}
+\subsection{Briefly outline Bohr's model of the atom. What are the main problems of this model?}
 
-\emph{Briefly outline Bohr's model of the atom. What are the main problems of this model?}
+Bohrs atommodel bygger på den kendte viden fra Rutherfords eksperiment om, at atomer består af en lille og tung kerne med positiv ladning. Ser vi på hydrogen har vi en proton som kerne og en elektron kredsende omkring denne. Tiltrækningen mellem de to ladede partikler er givet ved Couloubkraften, hvilken er invers proportional med $r^2$ ligesom tyngdekraften er, hvorfor Bohrs atommodel bygger på den klassiske model for et tolegmesystem, f.eks. en planet omkring en stjerne, hvor banen er en cirkelbane, som fra klassiske mekanik opretholdes af en balance mellem centripetalkraften og Coulombbkraften
+\begin{align} \label{eq:Q01_Centripetalkraft=Coulombkraft}
+	\frac{m_e v^2}{r} &= F_\text{centripetal} = F_\text{Coulomb} = \frac{e^2}{4\pi\epsilon_0 r^2} \: ,
+\end{align}
+hvor $m_e$ er elektronens masse, $v$ er elektronens fart, $e$ er elementarladningen, hvilken er svarende til størrelsen af ladningen af en elektron eller proton, og $r$ er radius af banen.
+
+Fra dette kan vinkelfrekvensen $\omega = v/r$ bestemmes
+\begin{align}
+    \frac{1}{r}\frac{m_e v^2}{r} &= \frac{m_e v^2}{r^2} = \frac{1}{r}\frac{e^2}{4\pi\epsilon_0 r^2} = \frac{e^2}{4\pi\epsilon_0 r^3} \nonumber\\
+    \Rightarrow \omega^2 &= \frac{v^2}{r^2} = \frac{e^2}{4\pi\epsilon_0 m_e r^3} \: ,
+\end{align}
+hvilket er ækvivalent til Keplers lov, hvilket også var formodet, da der er benyttet de samme antagelser og atomet lige pt. er beskrevet fuldstændig klassisk.
+
+Den totale energi i en sådan banebevægelse er givet ved summen af den kinetiske og potentielle energi
+\begin{align}
+    E &= T - U = \frac{1}{2}m_e v^2 - \frac{e^2}{4\pi\epsilon_0 r} \: ,
+\end{align}
+og ved at benytte \cref{eq:Q01_Centripetalkraft=Coulombkraft} fås den kinetiske energi til at være halvdelen af den potentielle energi
+\begin{align}
+    m_e v^2 &= \frac{e^2}{4\pi\epsilon_0 r}r = \frac{e^2}{4\pi\epsilon_0 r} \: ,
+\end{align}
+så den totale energi bliver
+\begin{align} \label{eq:Q01_TotalenergiIHydrogenAtom}
+    E &= - \frac{1}{2}\frac{e^2}{4\pi\epsilon_0 r} = - \frac{e^2}{8\pi\epsilon_0 r} \: ,
+\end{align}
+hvilken er negativ, da elektronen er i en bunden banebevægelse, så der skal tilføres energi til systemet for at fjerne elektronen fra banen.
+
+Bohr formodede da, at kun baner med bestemte energier var tilladte, og at elektronen kun ændrer energi, når den hopper mellem baner, og denne overskudsenergi, når den hopper fra en yderlige bane til en inderligere bane, udsendes som lys af en bølgelængde bestemt ved energiforskellen mellem banerne.
+
+\paragraph{Problem I:} Bohr antager, at en ændring af energi kun kan finde sted, når elektronen hopper mellem de tilladte baner, men ud fra klassisk elektrodynamik udsender en ladet partikel i bevægelse energi i form af elektromagnetiske bølger (lys), men dette ville også betyde, at elektronen gradvist ville spiralere ind mod protonen og dermed også kunne forholde sig i mellemrummet mellem de tilladte baner. Dette stemmer ikke overens med Bohrs andre antagelser, hvorfor han antog -- da modellen ikke forklarer det -- at elektronen ikke radierer i dens banebevægelse, hvilket viser sig at holde stik med de eksperimentelle data.
+
+\ldots
+\begin{align}
+    m_e v r &= n\hbar \: , \quad \forall n\in \mathbb{N} \: ,
+\end{align}
+
+
+
+\paragraph{Problem II:}
+
+
+
+
 
 Noter
 - S.3-5.

@@ -54,7 +54,7 @@
 \usepackage[raggedright]{titlesec}
 
 % Ligninger nummereres 1.1, 1.2 osv. i section 1 og 2.1, 2.2 osv. i section 2
-%\numberwithin{equation}{section}
+\numberwithin{equation}{section}
 
 % Ligninger nummereres 1.1.1, 1.1.2 osv. i subsection 1 og 2.1.1, 2.1.2 osv. i subsection 2 - dog også 1.0.1 og 2.0.1 i hhv. section 1 og 2.
 %\numberwithin{equation}{subsection}
@@ -119,6 +119,19 @@
 % Til subfigures
 \usepackage{caption}
 \usepackage{subcaption}
+
+% Pæne referencer med \cref
+\usepackage{cleveref}
+\crefname{equation}{ligning}{ligningerne}
+\Crefname{equation}{Ligning}{Ligningerne}
+\crefname{figure}{figur}{figurerne}
+\Crefname{figure}{Figur}{Figurerne}
+\crefname{table}{tabel}{tabellerne}
+\Crefname{table}{Tabel}{Tabellerne}
+\crefname{subsection}{underafsnit}{underafsnittene}
+\Crefname{subsection}{Underafsnit}{Underafsnittene}
+\crefname{section}{afsnit}{afsnittene}
+\Crefname{section}{Afsnit}{Afsnittene}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -197,63 +210,3 @@
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% HJÆLPENDE KOMMANDOER
-
-% FIGURER
-    % Figurnavn "?.jpg" skal være i ét ord eller med "_" (underscore) som mellemrum
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[scale=0.4]{?.jpg}
-    \caption{Billedtekst}
-    \label{fig:figur X}
-\end{figure}
-
-
-% LIGNINGER
-    % ALIGN UNDER HINANDEN MED "&"
-        % Det der står efter "&" stilles under hinanden
-    \begin{align}
-    	K_B+U_B&=K_A+U_A+W_{andet} \\
-    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
-    \end{align}
-    
-    % Matricer i align
-    \begin{align}
-        \begin{bmatrix}
-            
-        \end{bmatrix}  
-    \end{align}
-    
-    % SUBEQUATIONS OG SPLIT
-        % "Subequation" giver mulighed for at undernummerere delligninger som f.eks. 1a, 1b, 1c osv..
-        % "Split" giver herudover mulighed for kun ikke at undernummerere hver eneste af ligningerne, som f.eks. i at man har to ligninger, hvor den ene er en udledning, men den kun skal have ét nummer, selvom den dækker flere linjer.
-    \begin{subequations}
-    \begin{align}
-    \begin{split} \label{eq:lign. Xa}
-    	K_B+U_B&=K_A+U_A+W_{andet} \\
-    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
-    \end{split}
-    \\
-    \begin{split} \label{eq:lign. Xb}
-    	\Leftrightarrow U&=mgy
-    \end{split}
-    \end{align}
-    \end{subequations}
-    
-    % BREAK TIL NÆSTE LINJE VED "\\"
-    \begin{align}
-    	K_B+U_B&=K_A+U_A+W_{andet} \\
-    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
-    \end{align}
-    
-    % UNDGÅ NUMMERERING AF BESTEMTE LINJER I LIGNINGEN VED "\nonumber"
-    \begin{align}
-    	K_B+U_B&=K_A+U_A+W_{andet} \nonumber
-    \end{align}
-    
-    % LABEL
-    \begin{align} \label{eq:lign. X}
-    	K_B+U_B&=K_A+U_A+W_{andet} \\
-    	\Leftrightarrow U_A&=K_B+U_B-K_A-W_{andet}
-    \end{align}
