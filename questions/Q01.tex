@@ -29,25 +29,46 @@ hvilken er negativ, da elektronen er i en bunden banebevægelse, så der skal ti
 
 Bohr formodede da, at kun baner med bestemte energier var tilladte, og at elektronen kun ændrer energi, når den hopper mellem baner, og denne overskudsenergi, når den hopper fra en yderlige bane til en inderligere bane, udsendes som lys af en bølgelængde bestemt ved energiforskellen mellem banerne.
 
-\paragraph{Problem I:} Bohr antager, at en ændring af energi kun kan finde sted, når elektronen hopper mellem de tilladte baner, men ud fra klassisk elektrodynamik udsender en ladet partikel i bevægelse energi i form af elektromagnetiske bølger (lys), men dette ville også betyde, at elektronen gradvist ville spiralere ind mod protonen og dermed også kunne forholde sig i mellemrummet mellem de tilladte baner. Dette stemmer ikke overens med Bohrs andre antagelser, hvorfor han antog -- da modellen ikke forklarer det -- at elektronen ikke radierer i dens banebevægelse, hvilket viser sig at holde stik med de eksperimentelle data.
+\paragraph{Problem I -- Ingen stråling:} Bohr antager, at en ændring af energi kun kan finde sted, når elektronen hopper mellem de tilladte baner, men ud fra klassisk elektrodynamik udsender en ladet partikel i bevægelse energi i form af elektromagnetiske bølger (lys), men dette ville også betyde, at elektronen gradvist ville spiralere ind mod protonen og dermed også kunne forholde sig i mellemrummet mellem de tilladte baner. Dette stemmer ikke overens med Bohrs andre antagelser, hvorfor han antog -- da modellen ikke forklarer det -- at elektronen ikke radierer i dens banebevægelse, hvilket viser sig at holde stik med de eksperimentelle data.
 
 \ldots
 \begin{align}
-    m_e v r &= n\hbar \: , \quad \forall n\in \mathbb{N} \: ,
+    m_e v r &= n\hbar \: , \quad \forall n\in \mathbb{N} \: .
 \end{align}
+Kombineres denne med \cref{eq:Q01_Centripetalkraft=Coulombkraft} fås radius som værende
+\begin{align} \label{eq:Q01_RadiusSomFunktionAfN}
+    \frac{m_e v^2}{r} &= \frac{e^2}{4\pi\epsilon_0 r^2} \nonumber\\
+    \Rightarrow \frac{1}{r} &= \frac{e^2}{4\pi\epsilon_0 m_e v^2 r^2} = \frac{e^2 m_e}{4\pi\epsilon_0 m_e^2 v^2 r^2} \nonumber\\
+    \Rightarrow r &= \frac{4\pi\epsilon_0 m_e^2 v^2 r^2}{e^2 m_e} = \frac{4\pi\epsilon_0 \hbar^2 n^2}{e^2 m_e} = \frac{\hbar^2 n^2}{\left(e^2/4\pi\epsilon_0\right) m_e} = a_0 n^2 \: ,
+\end{align}
+hvor $a_0$ er Bohrradien,
+\begin{align}
+    a_0 &= \frac{\hbar^2}{\left(e^2/4\pi\epsilon_0\right) m_e} \: .
+\end{align}
+Fra \cref{eq:Q01_TotalenergiIHydrogenAtom} og \cref{eq:Q01_RadiusSomFunktionAfN} kan man få Bohr formlen
+\begin{align} \label{eq:Q01_BohrsFormel}
+    E &= - \frac{e^2}{8\pi\epsilon_0 r} = - \frac{e^2}{8\pi\epsilon_0 a_0} \frac{1}{n^2} \: ,
+\end{align}
+hvor $n$ kaldes \textsf{hovedkvantetallet} (eng. principal quantum number).
+Bohrs formel forudsiger, at lyset udsendt fra overgange, $n' \rightarrow n$, mellem de tilladte baner i atomet vil have bølgetal ($\tilde{\nu} = 1/\lambda$)
+\begin{align} \label{eq:Q01_BoelgetalFraBohrsFormel}
+    \tilde{\nu} &= R_\infty \left(\frac{1}{n^2} - \frac{1}{n'^2}\right) \: .
+\end{align}
+Udregnes de mulige bølgetal for hydrogen vil disse stemme forholdsvis overens med de udregnede bølgetal fra Rydbergs formel,
+\begin{align}
+    \tilde{\nu} &= \frac{1}{\lambda} = R \left(\frac{1}{n^2} - \frac{1}{n'^2}\right) \: .
+\end{align}
+Rydbergkonstanten $R_\infty$ i \cref{eq:Q01_BoelgetalFraBohrsFormel} er defineret som
+\begin{align}
+    hcR_\infty &= \frac{\left(e^2/4\pi\epsilon_0\right)^2 m_e}{2\hbar^2} \: ,
+\end{align}
+hvor $hc$ er en konversionsfaktor mellem energi og kvantetal, siden $R_\infty$ er givet i enheder af $\si{\per\metre}$ (eller $\si{\per\centi\metre}$, hvilket normalt benyttes). I laboratoriet har man ved hjælp af lasere kunnet finde en utrolig præcis værdi for Rydbergkonstanten $R_\infty = \SI{10973731.568525}{\per\metre}$.
+
+\paragraph{Problem II -- Antagelse om uendelig tung kerne:} \ldots
 
 
 
-\paragraph{Problem II:}
 
-
-
-
-
-Noter
-- S.3-5.
-- PP forelæsning 1
-- Få ligninger, der stammer fra den klassiske mekanik.
 
 Modellen
 - Kvantiseret banebevægelse => Modellen kunne forklare de observerede spektre for hydrogen.
