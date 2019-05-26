@@ -62,6 +62,10 @@
 % Subsections med uden at hedde f.eks. 0.1 og 0.2 (uden sections)
 %\renewcommand{\thesubsection}{\arabic{subsection}}
 
+% Figurer nummereres 1.1, 1.2 osv. i section 1 og 2.1, 2.2 osv. i section 2
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+
 % Til at indsætte MATLAB kode i ShareLaTeX
 % \usepackage{listings}
 % \usepackage{color}
@@ -133,6 +137,15 @@
 \crefname{section}{afsnit}{afsnittene}
 \Crefname{section}{Afsnit}{Afsnittene}
 
+% For spacing between lines
+\usepackage{setspace}
+    % To change line spacing in the whole document use the command \linespread covered in Text Formatting.
+    % Alternatively, you can use the \usepackage{setspace} package, which is also covered in Text Formatting. This package provides the commands \doublespacing, \onehalfspacing, \singlespacing and \setstretch{baselinestretch}, which will specify the line spacing for all sections and paragraphs until another command is used. Furthermore, the package provides the following environments in order to change line spacing within the document but not document-wide:
+    %%% doublespace: lines are double spaced;
+    %%% onehalfspace: line spacing set to one-and-half spacing;
+    %%% singlespace: normal line spacing;
+    %%% spacing: customizable line spacing, e.g. \begin{spacing}{\baselinestretch} ... \end{spacing}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -146,65 +159,65 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 
-\include{dispositioner/Q01}
-\include{questions/Q01}
+\include{Q01/Q01Disp}
+\include{Q01/Q01}
 
-\include{dispositioner/Q02}
-\include{questions/Q02}
+\include{Q02/Q02Disp}
+\include{Q02/Q02}
 
-\include{dispositioner/Q03}
-\include{questions/Q03}
+\include{Q03/Q03Disp}
+\include{Q03/Q03}
 
-\include{dispositioner/Q04}
-\include{questions/Q04}
+\include{Q04/Q04Disp}
+\include{Q04/Q04}
 
-\include{dispositioner/Q05}
-\include{questions/Q05}
+\include{Q05/Q05Disp}
+\include{Q05/Q05}
 
-\include{dispositioner/Q06}
-\include{questions/Q06}
+\include{Q06/Q06Disp}
+\include{Q06/Q06}
 
-\include{dispositioner/Q07}
-\include{questions/Q07}
+\include{Q07/Q07Disp}
+\include{Q07/Q07}
 
-\include{dispositioner/Q08}
-\include{questions/Q08}
+\include{Q08/Q08Disp}
+\include{Q08/Q08}
 
-\include{dispositioner/Q09}
-\include{questions/Q09}
+\include{Q09/Q09Disp}
+\include{Q09/Q09}
 
-\include{dispositioner/Q10}
-\include{questions/Q10}
+\include{Q10/Q10Disp}
+\include{Q10/Q10}
 
-\include{dispositioner/Q11}
-\include{questions/Q11}
+\include{Q11/Q11Disp}
+\include{Q11/Q11}
 
-\include{dispositioner/Q12}
-\include{questions/Q12}
+\include{Q12/Q12Disp}
+\include{Q12/Q12}
 
-\include{dispositioner/Q13}
-\include{questions/Q13}
+\include{Q13/Q13Disp}
+\include{Q13/Q13}
 
-\include{dispositioner/Q14}
-\include{questions/Q14}
+\include{Q14/Q14Disp}
+\include{Q14/Q14}
 
-\include{dispositioner/Q15}
-\include{questions/Q15}
+\include{Q15/Q15Disp}
+\include{Q15/Q15}
 
-\include{dispositioner/Q16}
-\include{questions/Q16}
+\include{Q16/Q16Disp}
+\include{Q16/Q16}
 
-\include{dispositioner/Q17}
-\include{questions/Q17}
+\include{Q17/Q17Disp}
+\include{Q17/Q17}
 
-\include{dispositioner/Q18}
-\include{questions/Q18}
+\include{Q18/Q18Disp}
+\include{Q18/Q18}
 
-\include{dispositioner/Q19}
-\include{questions/Q19}
+\include{Q19/Q19Disp}
+\include{Q19/Q19}
 
-\include{dispositioner/Q20}
-\include{questions/Q20}
+\include{Q20/Q20Disp}
+\include{Q20/Q20}
 
 
 \end{document}
