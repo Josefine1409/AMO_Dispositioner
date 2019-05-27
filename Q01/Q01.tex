@@ -31,10 +31,11 @@ Bohr formodede da, at kun baner med bestemte energier var tilladte, og at elektr
 
 \paragraph{Problem I -- Ingen stråling:} Bohr antager, at en ændring af energi kun kan finde sted, når elektronen hopper mellem de tilladte baner, men ud fra klassisk elektrodynamik udsender en ladet partikel i bevægelse energi i form af elektromagnetiske bølger (lys), men dette ville også betyde, at elektronen gradvist ville spiralere ind mod protonen og dermed også kunne forholde sig i mellemrummet mellem de tilladte baner. Dette stemmer ikke overens med Bohrs andre antagelser, hvorfor han antog -- da modellen ikke forklarer det -- at elektronen ikke radierer i dens banebevægelse, hvilket viser sig at holde stik med de eksperimentelle data.
 
-\ldots
+Bohr postulerede, at impulsmomentet var kvantiseret,
 \begin{align}
-    m_e v r &= n\hbar \: , \quad \forall n\in \mathbb{N} \: .
+    m_e v r &= n\hbar \: , \quad \forall n\in \mathbb{N} \: ,
 \end{align}
+hvorfor energien ville blive kvantiseret.
 Kombineres denne med \cref{eq:Q01_Centripetalkraft=Coulombkraft} fås radius som værende
 \begin{align} \label{eq:Q01_RadiusSomFunktionAfN}
     \frac{m_e v^2}{r} &= \frac{e^2}{4\pi\epsilon_0 r^2} \nonumber\\
@@ -64,13 +65,12 @@ Rydbergkonstanten $R_\infty$ i \cref{eq:Q01_BoelgetalFraBohrsFormel} er definere
 \end{align}
 hvor $hc$ er en konversionsfaktor mellem energi og kvantetal, siden $R_\infty$ er givet i enheder af $\si{\per\metre}$ (eller $\si{\per\centi\metre}$, hvilket normalt benyttes). I laboratoriet har man ved hjælp af lasere kunnet finde en utrolig præcis værdi for Rydbergkonstanten $R_\infty = \SI{10973731.568525}{\per\metre}$.
 
-\paragraph{Problem II -- Antagelse om uendelig tung kerne:} \ldots
-
-
-
-\begin{itemize}
-    \item Antager uendelig tung kerne, aka. stillestående kerne i centrum og kun bevægende elektroner i cirkelbaner.
-    \begin{itemize}
-        \item Der skal tages højde for reduceret masse, hvilken er forskellig mellem atomers isotoper. Dette leder til en lille men aflæselig observerbar forskel i frekvensen af det udsendte lys fra forskellige isotoper i samme atom, hvilket kaldes isotopskift.
-    \end{itemize}
-\end{itemize}
+\paragraph{Problem II -- Antagelse om uendelig tung kerne:} Selvom Bohrs formel giver en Rydbergkonstant $R_\infty$ meget tæt på værdien af Rydbergkonstanten for et hydrogenatom $R_H$, så er der et problem med den, hvilket kommer af, at Bohr har antaget en fikseret kerne, altså en uendelig tung kerne (hvorfor det nedsænkede $\infty$). I realiteten bevæger både protonen og elektronen rundt om deres samlede massemidtpunkt (center of mass). For en kerne med en endelig masse $M$, da kan ligningerne modificeres ved at udskifte elektronens masse $m_e$ med den reducerede masse
+\begin{align}
+    m &= \frac{m_e M}{m_e + M} \: ,
+\end{align}
+hvilket for hydrogen giver Rydbergkonstanten
+\begin{align}
+    R_H &= R\infty \frac{M_p}{m_e + M_p} \simeq R_\infty \left(1 - \frac{m_e}{M_p}\right) \: ,
+\end{align}
+hvor elektronmasse-til-protonmasse-forholdet er $m_e/M_p \simeq 1/1836$. Dette forhold er forskelligt for isotoperne af et grundstof, f.eks. hydrogen og deuterium, hvilket giver små men observerbare forskelle i frekvensen af det udsendte lys for forskellige isotoper af et grundstof, hvilket kaldes isotopskift.
