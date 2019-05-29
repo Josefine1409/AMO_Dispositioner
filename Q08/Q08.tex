@@ -29,23 +29,23 @@ Eksperimentets udfald viste sig dog at være noget anderledes. Der var en vis li
 
 Det blev foreslået af Uhlenbeck og Goudsmit i 1925, at elektroner havde et indre impulsmoment, også kaldet spin, hvilket viste sig at være rigtigt og kunne forklare resultatet fra Stern-Gerlach eksperimentet.
 
+\ldots
 
 
-
-\paragraph{Egenskaber ved spin:} Spin er et impulsmoment, hvorfor det vil kunne beskrives ved de samme vektoregenskaber som vi kender fra baneimpulsmomentet $L$, hvor egenvektorerne for $\Vec{S}^2$ og $\Vec{S}_z$ vil være givet ved
+\paragraph{Egenskaber ved spin:} Spin er et impulsmoment, hvorfor det vil kunne beskrives ved de samme vektoregenskaber som vi kender fra baneimpulsmomentet $L$, hvor egenvektorerne for $\Vec{s}^2$ og $\Vec{s}_z$ vil være givet ved
 \begin{align}
-    \Vec{S}^2\ket{S \: m_S} &= \hbar^2 S(S+1) \ket{S \: m_S} \label{eq:Q08_EgenvektorligningForS^2} \: , \\
-    \Vec{S}_z\ket{S \: m_S} &= \hbar m_S \ket{S \: m_S} \: , \label{eq:Q08_EgenvektorligningForS_z}
+    \Vec{s}^2\ket{S \: m_s} &= \hbar^2 s(s+1) \ket{s \: m_s} \label{eq:Q08_EgenvektorligningForS^2} \: , \\
+    s_z\ket{s \: m_s} &= \hbar m_s \ket{s \: m_s} \: , \label{eq:Q08_EgenvektorligningForS_z}
 \end{align}
 hvorfra man kan finde egenskaben for ''spin-stepopreratorerne''
 \begin{align}
-    \Vec{S}_\pm \ket{S \: m_S} &= \hbar \sqrt{S(S+1) - m_S(m_S \pm 1)} \ket{S \: (m \pm 1)} \: , \quad \Vec{S}_\pm \equiv \Vec{S}_x \pm i \Vec{S}_y \: .
+    s_\pm \ket{s \: m_s} &= \hbar \sqrt{s(s+1) - m_s(m_s \pm 1)} \ket{s \: (m \pm 1)} \: , \quad s_\pm \equiv s_x \pm i s_y \: .
 \end{align}
 \noindent
-Modsat baneimpulsmomentet må spin dog gerne have halve værdier for $S$ (i værdier af $\hbar$) og $m_S$, så
+Modsat baneimpulsmomentet må spin dog gerne have halve værdier for $s$ (i værdier af $\hbar$) og $m_s$, så
 \begin{align}
-    S &= 0, \: \frac{1}{2}, \: 1, \: \frac{3}{2}, \: \ldots \: , \\
-    m_S &= -S, \: -S + 1, \: \ldots \: , \: S - 1, \: S \: .
+    s &= 0, \: \frac{1}{2}, \: 1, \: \frac{3}{2}, \: \ldots \: , \\
+    m_s &= -s, \: -s + 1, \: \ldots \: , \: s - 1, \: s \: .
 \end{align}
 
 Alle elementarpartikler har et specifik spin: $\pi$-mesoner har spin $0$; elektroner, neutroner og protoner har spin $1/2$; fotoner har spin $1$; $\Delta$-baryoner har spin $3/2$; gravitroner har spin $2$; osv..
@@ -53,7 +53,7 @@ Alle elementarpartikler har et specifik spin: $\pi$-mesoner har spin $0$; elektr
 \noindent
 For en elektron vil man derfor få absolutværdien af spinvektoren, fra \cref{eq:Q08_EgenvektorligningForS^2},
 \begin{align}
-    \| \Vec{s} \| &= \sqrt{\hbar^2 \frac{1}{2}\left(\frac{1}{2}+1\right)} = \sqrt{\frac{3}{4}}\hbar = \frac{\sqrt{3}}{2} \hbar  \: , \\
+    \abs{\Vec{s}} &= \sqrt{\hbar^2 \frac{1}{2}\left(\frac{1}{2}+1\right)} = \sqrt{\frac{3}{4}}\hbar = \frac{\sqrt{3}}{2} \hbar  \: , \\
 \end{align}
 og de to komponenter i $z$-retninger er, fra \cref{eq:Q08_EgenvektorligningForS_z},
 \begin{align}
@@ -69,4 +69,4 @@ hvilket kan ses på \cref{fig:Q08_PropertiesOfSpin}.
 \end{figure}
 $ $\\
 
-For alle fermioner gør Paulis eksklusionsprincip sig gældende. Dette siger, at to fermioner kan ikke have de samme kvantetal, hvilket for elektroner betyder, at der maksimalt kan være to elektroner i hver orbital, da disse vil have hhv. spin-op og spin-ned, og dermed ikke have det samme $m_s$ kvantetal. Dette viser også, at hvis vi har 2 elektroner i en samme orbital, så vil deres spin gå ud med hinanden og resulterer, hvilket i Stern-Garlach eksperimentet ville resultere i et mønster som formodningen, når der ikke var en felt-interaktion, \cref{fig:Q08_SternGarlachExperimentResult}(længst til venstre), da denne er afhængig af $m_S$, \cref{ }.
+For alle fermioner gør Paulis eksklusionsprincip sig gældende. Dette siger, at to fermioner kan ikke have de samme kvantetal, hvilket for elektroner betyder, at der maksimalt kan være to elektroner i hver orbital, da disse vil have hhv. spin-op og spin-ned, og dermed ikke have det samme $m_s$ kvantetal. Dette viser også, at hvis vi har 2 elektroner i en samme orbital, så vil deres spin gå ud med hinanden og resulterer, hvilket i Stern-Garlach eksperimentet ville resultere i et mønster som formodningen, når der ikke var en felt-interaktion, \cref{fig:Q08_SternGarlachExperimentResult}(længst til venstre), da denne er afhængig af $m_s$, \cref{ }.
