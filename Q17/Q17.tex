@@ -13,14 +13,70 @@ hvor $A$ er \emph{finstrukturkonstanten} og det resterende kaldes \emph{interval
 
 \paragraph{Zeemaneffekten i hyperfinstruktur:} Som for Zeemaneffekten i finstruktur er der tre tilfælde: Hyperfinstrukturen regnes i et svagt magnetisk felt, et stærkt magnetisk felt, eller et felt med styrke midt i mellem.
 
-\paragraph{Svagt magnetisk felt:} I det svage magnetiske felt vil energiskiftet grundet Zeemaneffekten være mindre end energiskiftet grundet hyperfinstrukturen, $E_{ZE} < E_{HFS}$, hvorfor Zeemaneffekten kan ses som en perturbation til hyperfinstrukturen
+\paragraph{Svagt magnetisk felt:} I det svage magnetiske felt vil energiskiftet grundet Zeemaneffekten være mindre end energiskiftet grundet hyperfinstrukturen, $E_{ZE} < E_{HFS}$, hvorfor Zeemaneffekten kan ses som en perturbation til hyperfinstrukturen, så Hamiltonoperatoren bliver
 \begin{align}
-    H_{ZE}
+    H_{ZE} &= - \braket{\Vec{\mu}_F} \cdot \Vec{B} \: ,
 \end{align}
+hvor $\braket{\Vec{\mu}_F}$ er projektionen af $\Vec{\mu}_F$ ind langs $\Vec{F}$, hvilken skal benyttes, da denne er en middelværdi af $\Vec{\mu}_F$ ($\Vec{\mu}_F$ præciserer omkring $\braket{\Vec{\mu}_F}$), og $\braket{\Vec{\mu}_F}$ er velbeskrevet i basen $\ket{I \: J \: F \: M_F}$, hvilket $\Vec{\mu}_F$ ikke er. Denne basis benyttes idet, at vi arbejder med hyperfinstruktur for svage magnetfelter, hvorfor $\Vec{I}$ og $\Vec{J}$ kobler.
+
+Det totale magnetiske dipolmoment for et atom er givet som summen af dipolmomentet grundet elektronens spin og baneimpulsmoment og grundet kerneimpulsmomentet
+\begin{align}
+    \Vec{\mu}_F &= \Vec{\mu}_I + \Vec{\mu}_J = - \frac{\mu_B}{\hbar} \left( g_L \Vec{L} + g_S \Vec{S} \right) \: ,
+\end{align}
+hvor $\mu_B = e\hbar/(2m_e)$ er Bohrmagnetronen, og $g_L \simeq 1$ og $g_S \simeq 2$ er Landé g-faktorer for hhv. baneimpulsmomentet og spinet.
+
+AAAAAAAAAAAAAAAAAAAAAAAAA
+
+%%%%%%%%%%%%%%%%%%%%
+
+
+Det totale magnetiske dipolmoment for et atom er givet som summen af dipolmomentet grundet spin og grundet baneimpulsmomentet
+\begin{align}
+    \Vec{\mu}_J &= \Vec{\mu}_L + \Vec{\mu}_J = - \frac{\mu_B}{\hbar} \left( g_L \Vec{L} + g_S \Vec{S} \right) \: ,
+\end{align}
+hvor $\mu_B = e\hbar/(2m_e)$ er Bohrmagnetronen, og $g_L \simeq 1$ og $g_S \simeq 2$ er Landé g-faktorer for hhv. baneimpulsmomentet og spinet.
+
+Et atoms interaktion med et eksternt magnetfelt beskrives ved Hamiltonoperatoren
+\begin{align} \label{eq:Q15_StartudtrykForHamiltonForZeemaneffekten}
+    H_{ZE} = -\braket{\Vec{\mu}_J} \cdot \Vec{B} \: ,
+\end{align}
+hvor $\braket{\Vec{\mu}_J}$ er projektionen af $\Vec{\mu}_J$ ind langs $\Vec{J}$ -- dette kan ses på \cref{fig:Q15_ZeemanEffectInThePresenceOfSpin}
+-- hvilken skal benyttes, da denne er en middelværdi af $\Vec{\mu}_J$ ($\Vec{\mu}_J$ præciserer omkring $\braket{\Vec{\mu}_J}$), og $\braket{\Vec{\mu}_J}$ er velbeskrevet i basen $\ket{L \: S \: J \: M_J}$, hvilket $\Vec{\mu}_J$ ikke er. Denne basis benyttes idet, at vi arbejder med LS-kobling ($E_{ZE} \ll E_{SO}$), hvorfor også interaktionen i \cref{eq:Q15_StartudtrykForHamiltonForZeemaneffekten} kan ses som værende en perturbation til finstrukturen benyttende LS-kobling.
+
+Projektionen $\braket{\Vec{\mu}_J}$ findes ved
+\begin{align}
+    \braket{\Vec{\mu}_J} &= \left(\Vec{\mu}_J \cdot \Hat{J}\right) \Hat{J} = \frac{\Vec{\mu}_J \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} \Vec{J} = - \frac{\mu_B}{\hbar} \left( g_L \frac{\Vec{L} \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} + g_S \frac{\Vec{S} \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} \right) \Vec{J} \: ,
+\end{align}
+hvor $\Hat{J} = \Vec{J}/|\Vec{J}|$. Derved bliver Hamiltonoperatoren fra \cref{eq:Q15_StartudtrykForHamiltonForZeemaneffekten}, idet $\Vec{B} = B\Hat{z}$,
+\begin{align}
+    H_{ZE} &= -\left\{- \frac{\mu_B}{\hbar} \left( g_L \frac{\Vec{L} \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} + g_S \frac{\Vec{S} \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} \right) \Vec{J} \right\} \cdot \Vec{B} = \frac{\mu_B}{\hbar} \left( \frac{\Vec{L} \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} + 2\frac{\Vec{S} \cdot \Vec{J}}{\abs{\Vec{J} \,}^2} \right) B J_z \: ,
+\end{align}
+hvor det er blevet brugt, at $g_L \simeq 1$ og $g_S \simeq 2$, hvormed energiskiftet grundet Zeemaneffekten bliver
+\begin{align} \label{eq:Q15_EnergyZeemanInLSCouplingStart}
+    E_{ZE} &= \braket{H_{ZE}} = \frac{\mu_B}{\hbar} \left( \frac{\braket{\Vec{L} \cdot \Vec{J}}}{\hbar^2 J(J+1)} + 2 \frac{\braket{\Vec{S} \cdot \Vec{J}}}{\hbar^2 J(J+1)} \right) B \braket{J_z} \: .
+\end{align}
+
+Forventningsværdien af $\braket{\Vec{L} \cdot \Vec{J}}$ og $\braket{\Vec{S} \cdot \Vec{J}}$ findes ved at $\Vec{J} = \Vec{L} + \Vec{S}$, så
+\begin{align}
+    \Vec{S} &= \Vec{J} - \Vec{L} \Rightarrow \Vec{S}^2 = \Vec{J}^2 + \Vec{L}^2 - 2\Vec{L} \cdot \Vec{J} \nonumber\\
+    \Rightarrow \braket{\Vec{L} \cdot \Vec{J}} &= \frac{1}{2} \left(\braket{\Vec{J}^2} + \braket{\Vec{L}^2} - \braket{\Vec{S}^2}\right) = \frac{\hbar^2}{2} \left\{J(J+1) + L(L+1) - S(S+1)\right\} \: , \\
+    \Vec{L} &= \Vec{J} - \Vec{S} \Rightarrow \Vec{L}^2 = \Vec{J}^2 + \Vec{S}^2 - 2\Vec{S} \cdot \Vec{J} \nonumber\\
+    \Rightarrow \braket{\Vec{S} \cdot \Vec{J}} &= \frac{1}{2} \left(\braket{\Vec{J}^2} + \braket{\Vec{S}^2} - \braket{\Vec{L}^2}\right) = \frac{\hbar^2}{2} \left\{J(J+1) + S(S+1) - L(L+1)\right\} \: ,
+\end{align}
+hvorved vi får \cref{eq:Q15_EnergyZeemanInLSCouplingStart} til at blive
+\begin{align}
+    E_{ZE} &= \frac{\mu_B}{\hbar^3 J(J+1)} \frac{\hbar^2}{2}\left\{3J(J+1) - L(L+1) + S(S+1)\right\} B \braket{J_z} \nonumber\\
+    &= \frac{\mu_B}{\hbar} \frac{3J(J+1) + S(S+1) - L(L+1)}{2J(J+1)} B \braket{J_z} \nonumber\\
+    &= \frac{\mu_B}{\hbar} \frac{3}{2} + \frac{S(S+1) - L(L+1)}{2J(J+1)} B \hbar M_J \nonumber\\
+    &= g_J M_J \mu_B B_z \: , \quad \text{hvor} \quad g_J = \frac{3}{2} + \frac{S(S+1) - L(L+1)}{2J(J+1)} \: .
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%
 
 Dette kaldes den \emph{lineære Zeemaneffekt}.
 
 
 \paragraph{}
 
-Dette kaldes den \emph{ikke-lineære Zeemaneffekt} (eng. non-linear Zeeman effect)
+Dette kaldes den \emph{ikke-lineære Zeemaneffekt} (eng. non-linear Zeeman effect), også kaldet Pashen-Backeffekten (eng. the Pashen-Back effect)
