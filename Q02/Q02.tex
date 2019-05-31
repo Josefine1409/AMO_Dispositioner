@@ -1,13 +1,58 @@
 \subsection{Describe interaction of atoms with light by using the Einstein coefficients. Establish relationships between these coefficients. Relate the Einstein coefficients to spectroscopic experiments.}
 
 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Q02/images/TwoLevelSystem2.PNG}
+    \caption{To-niveausystem med energier $E_1$ og $E_2$, som kan være udarter med $g_1$ og $g_2$, samt har en startpopulation på $N_1$ og $N_2$. Einsteinkoefficienterne $B_{12}$, $B_{21}$ og $A_{21}$ angiver hhv. (stimuleret) absorption, stimuleret emission og spontan emission.}
+    \label{fig:Q02_TwoLevelSystem}
+\end{figure}
+
+Vi betragter et to-niveausystem med energier $E_1$ og $E_2$. Energiniveauerne har en udartethed (eng. degeneracy) på hhv. $g_1$ og $g_2$, og niveauerne starter med at indeholde hhv. $N_1$ og $N_2$ atomer.
+
+
+\begin{align}
+    \frac{\text{d}N_2}{\text{d}t} &= N_1 B_{12} \rho(\omega_{12}) - N_2 B_{21} \rho(\omega_{12}) - N_2 A_{21}
+\end{align}
+
+\begin{align}
+    \frac{\text{d}N_1}{\text{d}t} &= - \frac{\text{d}N_2}{\text{d}t}
+\end{align}
+
+\begin{align}
+    N_2(t) &= N_2(0)\exp{-A_{21}t}
+\end{align}
+
+
+\paragraph{Relation mellem A og B koefficienterne:}
+
+\begin{align}
+    \rho(\omega) &= \frac{\hbar\omega}{\pi^2c^3} \dfrac{1}{\exp{\dfrac{\hbar\omega}{k_B T}} - 1}
+\end{align}
+
+\begin{align}
+    \rho(\omega_{12}) &= \frac{A_{21}}{B_{21}} \dfrac{1}{\dfrac{N_1 B_{12}}{N_2 N_{21}} - 1}
+\end{align}
+
+\begin{align}
+    \frac{N_2}{g_2} &= \frac{N_1}{g_1}\exp{-\frac{\hbar\omega}{k_B T}}
+\end{align}
+
+\begin{align}
+    A_{21} & =\frac{\hbar\omega^3}{\pi^2c^3} B_{21}
+\end{align}
+
+\begin{align}
+    B_{12} &= \frac{g_2}{g_1} B_{12}
+\end{align}
+
+
+\paragraph{Relation af Einsteinkoefficienterne til spektroskopiske eksperimenter:} \ldots
 
 
 
-\paragraph{Relation of the Einstein coefficients to spectroscopic experiments:} \ldots
 
-
-
+\paragraph{IDEER FRA TØ}
 
 Noter
 - S. 11-13
