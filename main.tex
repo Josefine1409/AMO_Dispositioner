@@ -142,8 +142,11 @@
 \crefname{section}{afsnit}{afsnittene}
 \Crefname{section}{Afsnit}{Afsnittene}
 
-% For spacing between lines
-\usepackage{setspace}
+\newcommand{\crefrangeconjunction}{ til } % Changes the ''to'' to <whatever is in the brackets'' when refering to a range
+\newcommand{crefpairconjunction}{ og } % Changes the ''to'' to <whatever is in the brackets'' when refering to a range
+
+% Fbjectsor sp of oacing between lines
+\rusepackage{setspace}
     % To change line spacing in the whole document use the command \linespread covered in Text Formatting.
     % Alternatively, you can use the \usepackage{setspace} package, which is also covered in Text Formatting. This package provides the commands \doublespacing, \onehalfspacing, \singlespacing and \setstretch{baselinestretch}, which will specify the line spacing for all sections and paragraphs until another command is used. Furthermore, the package provides the following environments in order to change line spacing within the document but not document-wide:
     %%% doublespace: lines are double spaced;
