@@ -61,9 +61,9 @@ Sammenlignes nu $\Dot{\mathcal{U}}$ og $\Dot{\mathcal{V}}$ fra \cref{eq:Q18_DotU
     \Dot{v} &= -\delta u + \Omega w - \frac{\Gamma}{2}v \: , \label{eq:Q18_DotLilleV} \\
     \Dot{w} &= -\Omega v - \Gamma(w - 1) \: , \label{eq:Q18_DotLilleW}
 \end{align}
-hvilke beskriver excitationen af et toniveausystem grundet interaktion med lys, som har en frekvens tæt på atomets resonansfrekvens, for en overgang, som også kan henfalde ved spontan emission. \Cref{eq:Q18_DotLilleU,eq:Q18_DotLilleV,eq:Q18_DotLilleW} kan skrives som $\Dot{\Vec{R}} = \Vec{R} \cross \Vec{W} - \Gamma \Vec{A}$, hvor $\Vec{A} = (u/2,\: v/2,\: w - 1)$. Blochvektoren $\Vec{R}$ forbliver altså den samme, mens de optiske Blochligninger blot tilføjes et dæmpningsled.
+hvilke beskriver excitationen af et toniveausystem grundet interaktion med lys, som har en frekvens tæt på atomets resonansfrekvens, for en overgang, som også kan henfalde ved spontan emission.
 
-Vi betragter nu steady-state løsningen\footnote{Steady-state løsningen fremkommer idet man indsætter $\Dot{u} = \Dot{v} = \Dot{w} = 0$ ind i \cref{eq:Q18_DotLilleU,eq:Q18_DotLilleV,eq:Q18_DotLilleW}, hvilket giver tre samtidige løsninger.}, som fremkommer, når vi arbejder med tider, som er meget længere end levetiden for det øvre energiniveau, $t \ll \Gamma^{-1}$,
+Vi betragter nu ligevægtsløsningen\footnote{Ligevægtsløsningen fremkommer idet man indsætter $\Dot{u} = \Dot{v} = \Dot{w} = 0$ ind i \cref{eq:Q18_DotLilleU,eq:Q18_DotLilleV,eq:Q18_DotLilleW} (eng. steady-state solution), hvilket giver tre samtidige løsninger.}, som fremkommer, når vi arbejder med tider, som er meget længere end levetiden for det øvre energiniveau, $t \ll \Gamma^{-1}$,
 \begin{align}
     \begin{pmatrix}
         u \\
@@ -82,3 +82,13 @@ Disse ligninger viser, at en stærk drivfelt ($\Omega \rightarrow \infty$) vil f
 \begin{align}
     \rho_{22} &= \frac{1 - \omega}{2} = \dfrac{\Omega^2 / 4}{\delta^2 + \Omega^2 / 2 + \Gamma^2 / 4} \rightarrow \frac{1}{2} \: , \quad \text{idet} \quad \Omega \rightarrow \infty \: .
 \end{align}
+
+
+\paragraph{Diskussion af resultatet ved brug af Blochsfæren:} \Cref{eq:Q18_DotLilleU,eq:Q18_DotLilleV,eq:Q18_DotLilleW} kan skrives som $\Dot{\Vec{R}} = \Vec{R} \cross \Vec{W} - \Gamma \Vec{A}$, hvor $\Vec{A} = (u/2,\: v/2,\: w - 1)$. Blochvektoren $\Vec{R}$ forbliver altså den samme, mens de optiske Blochligninger blot tilføjes et dæmpningsled. Grundet dæmpningsledet, så vil Blochsfæren dog over tid blive mindre og mindre, da $\Vec{A}$'s første- og andekomponenter er parallelle med $\Vec{R}$'s, men dog af den halve længde.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{Q18/images/BlochSphere.PNG}
+    \caption{}
+    \label{fig:Q18_BlochSphere}
+\end{figure}
