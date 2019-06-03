@@ -12,7 +12,7 @@ Stern-Gerlach eksperimentet blev udført af Stern og Gerlach i 1921, og skulle b
     \label{fig:Q08_SternGerlachEksperimentOpstilling}
 \end{figure}
 
-\paragraph{Forventning vs. resultat:} Eksperimentet havde mulighed for flere udfald, alt efter hvilken teori, som man anså som rigtig, se \cref{fig:Q08_SternGarlachExperimentResult}. Både den klassiske og den kvantemekaniske fortolkning var enige om, at var det totale impulsmoment $l = 0$, så ville det ikke interagere med det magnetiske felt, hvorfor atomerne blot ville fortsætte uden at blive afbøjet, og det samme ville gøre sig gældende, hvis der intet magnetfelt var. For impulsmomenter forskellig fra nul -- hvilket man i 1921, hvor eksperimentet blev udført, var sikker på, da man mente, at det havde $L = 1$ -- var de to teorier dog ikke enige.
+\paragraph{Forventning vs. resultat:} Eksperimentet havde mulighed for flere udfald, alt efter hvilken teori, som man anså som rigtig, se \cref{fig:Q08_SternGarlachExperimentResult}. Både den klassiske og den kvantemekaniske fortolkning var enige om, at var det totale impulsmoment $L = 0$, så ville det ikke interagere med det magnetiske felt, hvorfor atomerne blot ville fortsætte uden at blive afbøjet, og det samme ville gøre sig gældende, hvis der intet magnetfelt var. For impulsmomenter forskellig fra nul -- hvilket man i 1921, hvor eksperimentet blev udført, var sikker på, da man mente, at det havde $L = 1$ -- var de to teorier dog ikke enige.
 
 Lamors klassiske teori om, at der ikke var en foretrukken retning for en magnetisk dipol, som man kan se et atom som, formodede, at man ville se et ''udsmurt'' mønster mellem den maksimale positive og negative afbøjning -- der ville fremkomme, når atomets magnetisk dipol ville være hhv. parallel og anti-parallel med $z$-aksen -- på den fotografiske plade, dog med maksimal intensitet i midten af sølvatomstrålen.
 
@@ -29,7 +29,17 @@ Eksperimentets udfald viste sig dog at være noget anderledes. Der var en vis li
 
 Det blev foreslået af Uhlenbeck og Goudsmit i 1925, at elektroner havde et indre impulsmoment, også kaldet spin, hvilket viste sig at være rigtigt og kunne forklare resultatet fra Stern-Gerlach eksperimentet.
 
-\ldots
+Stern-Gerlach eksperimentet udnytter Zeemaneffekten af finstrukturen\footnote{Det er egentlig Zeemaneffekten af hyperfinstrukturen, som er benyttet, men siden hyperfinstrukturen er $\sim 2000$ gange svagere end finstrukturen, da negligeres denne, da vi egentlig er interesseret i at vi afbøjningen relativit til $J$.} idet, at der er tale om atomer i et eksternt magnetfelt. Ved brug af Zeemaneffekten i hyperfinstruktur (LS-kobling) fås det, at energiskiftet er
+\begin{align}
+    E_{ZE,LS} &= g_J \mu_B M_J B \: ,
+\end{align}
+hvor $\Vec{J} = \Vec{L} + \Vec{S}$ er det totale elektronimpulsmoment, $g_J$ er Landé g-faktoren og $\mu_B$ er Bohrmagnetronen. Det magnetiske felt er her inhomogent i $z$-retningen ($B = B(s)$). Beregnes nu kraften, som udføres på atomet grundet vekselvirkningen med det magnetiske felt fås
+\begin{align} \label{eq:Q08_KraftenISternGerlach}
+    F &= -\Vec{\nabla}E_{ZE,LS} = - g_J \mu_B M_J \frac{\partial B}{\partial z} \: ,
+\end{align}
+hvor altså $M_J = \{|L-S|,\: |L-S|+1,\: \ldots ,\: |L+S|\}$.
+
+Regner vi for det formodede scenarie af sølv, hvor $L = 1$, og man ikke kendte til spin ($S=0$), så får man $J = 1 \Rightarrow M_J = \{-1,\: 0,\: 1\}$, altså 3 opsplitninger, mens resultatet af eksperimentet gav 2 opsplitninger, idet sølv har termsymbolet ${}^2\text{S}_{1/2}$, hvorfor $J = 1/2 \Rightarrow M_J = \pm 1/2$ (altså $L = 0$ og $S = 1$), altså 2 opsplitninger.
 
 
 \paragraph{Egenskaber ved spin:} Spin er et impulsmoment, hvorfor det vil kunne beskrives ved de samme vektoregenskaber som vi kender fra baneimpulsmomentet $L$, hvor egenvektorerne for $\Vec{s}^2$ og $\Vec{s}_z$ vil være givet ved
@@ -69,4 +79,4 @@ hvilket kan ses på \cref{fig:Q08_PropertiesOfSpin}.
 \end{figure}
 $ $\\
 
-For alle fermioner gør Paulis eksklusionsprincip sig gældende. Dette siger, at to fermioner kan ikke have de samme kvantetal, hvilket for elektroner betyder, at der maksimalt kan være to elektroner i hver orbital, da disse vil have hhv. spin-op og spin-ned, og dermed ikke have det samme $m_s$ kvantetal. Dette viser også, at hvis vi har 2 elektroner i en samme orbital, så vil deres spin gå ud med hinanden og resulterer, hvilket i Stern-Garlach eksperimentet ville resultere i et mønster som formodningen, når der ikke var en felt-interaktion, \cref{fig:Q08_SternGarlachExperimentResult}(længst til venstre), da denne er afhængig af $m_s$, \cref{ }.
+For alle fermioner gør Paulis eksklusionsprincip sig gældende. Dette siger, at to fermioner kan ikke have de samme kvantetal, hvilket for elektroner betyder, at der maksimalt kan være to elektroner i hver orbital, da disse vil have hhv. spin-op og spin-ned, og dermed ikke have det samme $m_s$ kvantetal. Dette viser også, at hvis vi har 2 elektroner i en samme orbital, så vil deres spin gå ud med hinanden og resulterer, hvilket i Stern-Garlach eksperimentet ville resultere i et mønster som formodningen, når der ikke var en felt-interaktion, \cref{fig:Q08_SternGarlachExperimentResult}(længst til venstre), da denne er afhængig af $M_J$ (som kommer af $J$, der afhænger af blandt andet $S$), \cref{eq:Q08_KraftenISternGerlach}.
