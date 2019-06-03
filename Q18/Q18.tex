@@ -1,7 +1,7 @@
 \subsection{Outline how spontaneous emission can be included in the semiclassical description of atom-light interaction and discuss the result using the optical Bloch vector.}
 
 
-I den semiklassiske beskrivelse af atom-lysinteraktion ser man lyset som værende en elektromagnetisk bølge, som beskrives klassisk, og ser atomet, som værende et toniveausystem, som er beskrevet kvantemekanisk, og man gør brug af dipolapproksimationen\footnote{Dipolapproksimationen holder så længe, at lysets bølgelængde er større end atomet, $\lambda \gg a_0$.}. Lysbølgen perturberer systemet således, at det vil begynde at oscillere mellem grundtilstanden og den exciterede tilstand, hvilket hedder \emph{Rabioscillationer}, og disse opstår kun, når der ikke er spontan emission. Disse oscillationer kan beskrives ved Blochligningerne
+I den semiklassiske beskrivelse af atom-lysinteraktion ser man lyset som værende en elektromagnetisk bølge, som beskrives klassisk, og ser atomet, som værende et toniveausystem, som er beskrevet kvantemekanisk, og man gør brug af dipolapproksimationen\footnote{Dipolapproksimationen holder så længe, at lysets bølgelængde er større end atomet, $\lambda \gg a_0$.}. Lysbølgen perturberer systemet således, at det vil begynde at oscillere mellem grundtilstanden og den exciterede tilstand, hvilket hedder \textsf{Rabioscillationer}, og disse opstår kun, når der ikke er spontan emission. Disse oscillationer kan beskrives ved Blochligningerne
 \begin{align}
     \Dot{\Vec{R}} &=
         \begin{pmatrix}
@@ -40,7 +40,7 @@ hvor første led er den del af forskydningen (eng. the displacement), som er i f
     \Dot{\mathcal{U}} &= (\omega - \omega_0)\mathcal{V} - \frac{\beta}{2}\mathcal{U} \: , \label{eq:Q18_DotU} \\
     \Dot{\mathcal{V}} &= -(\omega - \omega_0)\mathcal{U} - \frac{\beta}{2}\mathcal{V} - \frac{F(t)}{2m\omega} \: . \label{eq:Q18_DotV}
 \end{align}
-Amplituderne $\mathcal{U}$ og $\mathcal{V}$ ændrer sig med tiden som amplituden af kraften ændres, idet at vi har antaget, at kraften ændrer sig meget langsomt sammenlignet med oscillationen grundet drivfrekvensen, så må dette også gøre sig gældende for $\mathcal{U}$ og $\mathcal{V}$. Dette kaldes den \emph{langsomtændrende konvolut-approksimation} (eng. slowly-varying envelope approximation), hvilken er blevet brugt til at udlede \cref{eq:Q18_DotU,eq:Q18_DotV}. Denne approksimation går ud på, at $\Ddot{\mathcal{U}}$ og $\Ddot{\mathcal{V}}$ er blevet negligeret\footnote{Da $\Ddot{\mathcal{U}} \sim \Ddot{\mathcal{V}} \ll 1$.}, og $\Dot{\mathcal{V}} \ll \omega \mathcal{V}$.
+Amplituderne $\mathcal{U}$ og $\mathcal{V}$ ændrer sig med tiden som amplituden af kraften ændres, idet at vi har antaget, at kraften ændrer sig meget langsomt sammenlignet med oscillationen grundet drivfrekvensen, så må dette også gøre sig gældende for $\mathcal{U}$ og $\mathcal{V}$. Dette kaldes den \textsf{langsomtændrende konvolut-approksimation} (eng. slowly-varying envelope approximation), hvilken er blevet brugt til at udlede \cref{eq:Q18_DotU,eq:Q18_DotV}. Denne approksimation går ud på, at $\Ddot{\mathcal{U}}$ og $\Ddot{\mathcal{V}}$ er blevet negligeret\footnote{Da $\Ddot{\mathcal{U}} \sim \Ddot{\mathcal{V}} \ll 1$.}, og $\Dot{\mathcal{V}} \ll \omega \mathcal{V}$.
 
 Den totale energi af systemet er givet som summen af den kinetiske energi ($\frac{1}{2}m\Dot{x}^2$) og den potentielle energi ($\frac{1}{2}m\omega_0^2x^2$), hvorved den totale energi bliver $E = \frac{1}{2}m\omega^2(\mathcal{U}^2 + \mathcal{V}^2)$, idet der gøres brug af approksimationen $\omega_0^2 \simeq \omega^2$, hvilken er gældende, da vi har gjort brug af en antagelse om at $\omega + \omega_0 \simeq 2\omega$ \footnote{Antagelsen er at $\omega^2 - \omega_0^2 = (\omega + \omega_0)(\omega - \omega_0) \simeq 2\omega(\omega - \omega_0)$.}, som kun gør sig gældende, når $\omega$ er tæt på resonansfrekvensen $\omega_0$. Denne energi ændres med raten $\Dot{E} = m_\omega^2(\mathcal{U}\Dot{\mathcal{U}} + \mathcal{V}\Dot{\mathcal{V}})$, og ved brug af \cref{eq:Q18_DotU,eq:Q18_DotV} bliver dette
 \begin{align} \label{eq:Q18_DotE}
@@ -55,7 +55,7 @@ Af dette kan det ses, at hvis der ikke er en drivkraft ($F = 0$), så vil energi
 \end{align}
 hvor $\Gamma$ er dæmpningsledet. Af \cref{eq:Q18_DotRho22} kan det ses, at uden en Rabifrekvens ($\Omega = 0$), hvilket er drivfrekvensen, så vil populationen i den exciterede tilstand henfalde eksponentielt\footnote{Da $\Dot{x} = -kx \Rightarrow x(t) = x(0)\exp{-\Gamma t}$.}.
 
-Sammenlignes nu $\Dot{\mathcal{U}}$ og $\Dot{\mathcal{V}}$ fra \cref{eq:Q18_DotU,eq:Q18_DotV} med $\Dot{u}$ og $\Dot{v}$ fra de optiske Blochligninger uden spontan emission, så vil de \emph{optiske Blochligninger} indeholdende spontan emission blive
+Sammenlignes nu $\Dot{\mathcal{U}}$ og $\Dot{\mathcal{V}}$ fra \cref{eq:Q18_DotU,eq:Q18_DotV} med $\Dot{u}$ og $\Dot{v}$ fra de optiske Blochligninger uden spontan emission, så vil de \textsf{optiske Blochligninger} indeholdende spontan emission blive
 \begin{align}
     \Dot{u} &= \delta v - \frac{\Gamma}{2}u \: , \label{eq:Q18_DotLilleU} \\
     \Dot{v} &= -\delta u + \Omega w - \frac{\Gamma}{2}v \: , \label{eq:Q18_DotLilleV} \\
