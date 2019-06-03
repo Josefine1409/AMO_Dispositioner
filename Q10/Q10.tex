@@ -101,4 +101,35 @@ hvor
     \beta &= \frac{\hbar^2}{2m_e^2c^2} \frac{e^2}{4\pi\epsilon_0} \dfrac{1}{l\left(l+\dfrac{1}{2}\right)\left(l + 1\right) n^3a^3} = \frac{\mu_B^2}{2c^2\pi\epsilon_0} \dfrac{1}{l\left(l+\dfrac{1}{2}\right)\left(l + 1\right) n^3a^3} \: .
 \end{align}
 
-\paragraph{Opsplitning af energitilstande i hydrogen:}
+\paragraph{Opsplitning af energitilstande i hydrogen:} Betragter vi hydrogen, og mere specifikt opsplitningerne, som fremkommer som finstruktur af $n = 2$ og $n = 3$ skallerne, så finder vi fra \cref{eq:Q10_EnergiskiftSpinOrbitForHydrogen} at 2p-konfigurationen vil have finstrukturopsplitningn med energierne
+\begin{align}
+    E_{SO}(2^2\text{P}_{1/2}) &= -\beta_{2\text{p}} \: , \quad \text{og} \\
+    E_{SO}(2^2\text{P}_{3/2}) &= \frac{1}{2}\beta_{2\text{p}} \: ,
+\end{align}
+hvilket kan ses af \cref{fig:Q10_FinstrukturForHydrogen1}(a). For 3d-konfigurationen fås
+\begin{align}
+    E_{SO}(3^2\text{P}_{3/2}) &= -\frac{3}{2}\beta_{3\text{d}} \: , \quad \text{og} \\
+    E_{SO}(3^2\text{P}_{5/2}) &= \beta_{3\text{d}} \: ,
+\end{align}
+hvilket kan ses af \cref{fig:Q10_FinstrukturForHydrogen1}(b).
+
+Spin-banekoblingen ændrer ikke på $2^2\text{S}_{1/2}$ eller $3^2\text{S}_{1/2}$ tilstandene, so ville formode, at disse ikke har en energiændring, men det viser sig, at finstruktur for hydrogen er lidt mere end bare energiskiftet ved spin-banekoblingen, da der også skal medtages nogle relativistiske korrektioner\footnote{Relativistisk massekorrektion og Darwintermen (som korrigerer for $n=0$ tilfældet. Se \textit{Introduction to Quantum Mechanics} af Griffith, fodnote 14 på side 274).}, hvilket resulterer i, at finstrukturen er udartet (eng. degenerate) i $j$, og udartetheden (eng. degeneracy) i $n$ fra Schrödingerligningen er løftet.
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[t]{0.40\textwidth}
+        \centering
+        \includegraphics[width=.83\textwidth]{Q10/images/SpinOrbitCouplingHydrogenSplittings.PNG}
+        \caption{Finstrukturen for hhv. (a) 2p-konfigurationerne og (b) 3d-konfigurationerne grundet spin-banekoblingens energiskift. Noter at energiskalaerne er af forskellig størrelse, idet $\beta_{2p}$ er betydelig større end $\beta_{3d}$. Alle p- og d-konfigurationer ser ens ud og kun afviger på den overordnede skaleringsfaktor.}
+        \label{fig:Q10_FinstrukturForHydrogen1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.53\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Q10/images/FineStructureOfHydrogen.PNG}
+        \caption{Finstruktur af hydrogen. Grundet yderlige relativistiske korrektioner\footnote{Relativistisk massekorrektion og Darwintermen (som korrigerer for $n=0$ tilfældet. Se \textit{Introduction to Quantum Mechanics} af Griffith, fodnote 14 på side 274).} ud over spin-banekoblingen er der udartethed i $j$.}
+        \label{fig:Q10_FinstrukturForHydrogen2}
+    \end{subfigure}
+    \caption{Finstrukturopsplitningen af hydrogen.}
+    \label{fig:Q10_FinstrukturForHydrogen}
+\end{figure}
