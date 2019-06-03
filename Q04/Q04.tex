@@ -11,11 +11,11 @@ Påvirkes dette toniveausystem nu af elektromagnetisk stråling (lys) fra et osc
 \begin{align}
     H'(t) &= e\Vec{r} \cdot \Vec{E}_0 \cos(\omega t) \: .
 \end{align}
-Dette leder til et induceret dipolmoment ifølge \emph{dipolapproksimationen}\footnote{Et atom kan approksimeres til at være en dipol. Dipolapproksimationen holder så længe, at lysets bølgelængde er større end atomet, $\lambda \gg a_0$.} Vi lader nu lyset være polariseret langs $x$-aksen, hvorved komponenten af dipolen langs denne akse vil være givet ved forventningsværdien
+Dette leder til et induceret dipolmoment ifølge \textsf{dipolapproksimationen}\footnote{Et atom kan approksimeres til at være en dipol. Dipolapproksimationen holder så længe, at lysets bølgelængde er større end atomet, $\lambda \gg a_0$.} Vi lader nu lyset være polariseret langs $x$-aksen, hvorved komponenten af dipolen langs denne akse vil være givet ved forventningsværdien
 \begin{align} \label{eq:Q04_ElektronladningGangeInduceretDipolmoment}
     -eD_x(t) = -\bra{\Psi(t)}ex\ket{\Psi(t)} = -e\left(c_2^*c_1X_{21}\exp{i\omega_0 t} + c_1^*c_2Z_{12}\exp{-i\omega_0 t}\right) \: ,
 \end{align}
-hvor $\omega_0 = \omega_2 - \omega_1 = \Delta \omega$ og $X_{ij} = \bra{i}x\ket{j}$, idet der er gjort brug af bølgefunktionen fra \cref{eq:Q04_TotalBoelgefunktionTidsafhaengig}. Dipolmomentet giver en reel værdi, idet $X_{ij} = \bra{i}x\ket{j} \Rightarrow X_{21} = (X_{12})^*$, og at $X_{11} = X_{22} = 0$. For at beregne dipolmomentet $D_x(t)$ induceret af det elektriske felt, da bliver vi nødt til at kende $c_1^*c_2$ og $c_2^*c_1$, hvilke er elementer i \emph{densitetsmatricen}
+hvor $\omega_0 = \omega_2 - \omega_1 = \Delta \omega$ og $X_{ij} = \bra{i}x\ket{j}$, idet der er gjort brug af bølgefunktionen fra \cref{eq:Q04_TotalBoelgefunktionTidsafhaengig}. Dipolmomentet giver en reel værdi, idet $X_{ij} = \bra{i}x\ket{j} \Rightarrow X_{21} = (X_{12})^*$, og at $X_{11} = X_{22} = 0$. For at beregne dipolmomentet $D_x(t)$ induceret af det elektriske felt, da bliver vi nødt til at kende $c_1^*c_2$ og $c_2^*c_1$, hvilke er elementer i \textsf{densitetsmatricen}
 \begin{align} \label{eq:Q04_DensityMatrix}
     \ketbra{\psi}{\Psi} &=
         \begin{pmatrix}
@@ -35,14 +35,14 @@ hvor $\omega_0 = \omega_2 - \omega_1 = \Delta \omega$ og $X_{ij} = \bra{i}x\ket{
         \end{pmatrix}
     \: .
 \end{align}
-Her beskriver diagonalelementerne ($|c_1|^2$ og $|c_2|^2$) populationerne i hhv. grundtilstanden og den exciterede tilstand, mens antidiagonalelementerne (eng. the off-diagonal elements) kaldes \emph{kohærenser} (eng. coherences) og beskriver systemet ved drivfrekvensen (\cref{eq:Q04_ElektronladningGangeInduceretDipolmoment}).
+Her beskriver diagonalelementerne ($|c_1|^2$ og $|c_2|^2$) populationerne i hhv. grundtilstanden og den exciterede tilstand, mens antidiagonalelementerne (eng. the off-diagonal elements) kaldes \textsf{kohærenser} (eng. coherences) og beskriver systemet ved drivfrekvensen (\cref{eq:Q04_ElektronladningGangeInduceretDipolmoment}).
 
 Vi definerer nu to nye variable (for at fjerne den trivielle fase)
 \begin{align}
     \widetilde{c}_1 &= c_1\exp{-\frac{i\delta t}{2}} \: , \\
     \widetilde{c}_2 &= c_2\exp{\frac{i\delta t}{2}} \: ,
 \end{align}
-hvor $\delta = \omega - \omega_0$ kaldes \emph{detuningen}\footnote{Fordansket oversættelse af ''the detuning''.} (afvigelsen) af lysets frekvens fra atomets ræsonansfrekvens. Denne transformation ændrer ikke på populationerne, hvorfor
+hvor $\delta = \omega - \omega_0$ kaldes \textsf{detuningen}\footnote{Fordansket oversættelse af ''the detuning''.} (afvigelsen) af lysets frekvens fra atomets ræsonansfrekvens. Denne transformation ændrer ikke på populationerne, hvorfor
 \begin{align}
     \widetilde{\rho}_{11} &= \rho_{11} \quad \text{og} \quad \widetilde{\rho}_22 = \rho_{22} \: ,
 \end{align}
@@ -76,7 +76,7 @@ Beskrives disse optiske Blochligninger som funktion af $u$, $v$ og $w = \rho_{11
     \Dot{v} &= -\delta u + \Omega w \: , \label{eq:Q04_DotV} \\
     \Dot{w} &= -\Omega v \: . \label{eq:Q04_DotW}
 \end{align}
-Ved at definere \emph{Blochvektoren} som $\Vec{R} = u\Hat{e}_1 + v\Hat{e}_2 + w\Hat{e}_3$ kan \cref{eq:Q04_DotU,eq:Q04_DotV,eq:Q04_DotW} skrives som
+Ved at definere \textsf{Blochvektoren} som $\Vec{R} = u\Hat{e}_1 + v\Hat{e}_2 + w\Hat{e}_3$ kan \cref{eq:Q04_DotU,eq:Q04_DotV,eq:Q04_DotW} skrives som
 \begin{align} \label{eq:Q04_DotBlochVector}
     \Dot{\Vec{R}} &= \Vec{R} \cross \Vec{W} = \Vec{R} \cross \left(\Omega\Hat{e}_1 + \delta\Hat{e}_3\right) \: .
 \end{align}
