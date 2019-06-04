@@ -24,7 +24,7 @@ Denne interaktion med lys blander tilstandene med energier $E_1$ og $E_2$. Inds�
     i\Dot{c}_1 &= \Omega \cos(\omega t) \exp{-i\omega_0 t} c_2 \: , \label{eq:Q03_CoupledDifferentialEquationsForC1AndC2_C1} \\
     i\Dot{c}_2 &= \Omega^* \cos(\omega t) \exp{i\omega_0 t} c_1 \: , \label{eq:Q03_CoupledDifferentialEquationsForC1AndC2_C2}
 \end{align}
-hvor $\omega = (E-2 - E_1)/\hbar = \Delta E / \hbar$, og \textsf{Rabifrekvensen} $\Omega$ er defineret ved
+hvor $\omega_0 = (E_2 - E_1)/\hbar = \Delta E / \hbar$, og \textsf{Rabifrekvensen} $\Omega$ er defineret ved
 \begin{align}
     \Omega &= \frac{\bra{1}e\Vec{r}\cdot\Vec{E}_0\ket{2}}{\hbar} = \frac{e}{\hbar} \int \psi_1^* \Vec{\Vec{r}} \cdot \Vec{E}_0 \psi_2(\Vec{r}) \: \text{d}^3\Vec{r} \: .
 \end{align}
@@ -39,7 +39,7 @@ Grundet \textsf{dipolapproksimationen} vil det elektriske felt have en stort set
     c_1(t) &= 1 \: , \label{eq:Q03_UdtrykForC1(t)EfterAntagelseOmPopulation}\\
     c_2(t) &= \frac{\Omega^*}{2} \left\{\frac{1 - \exp{i(\omega_0 + \omega)t}}{\omega_0 + \omega} + \frac{1 - \exp{i(\omega_0 - \omega)t}}{\omega_0 - \omega}\right\} \: , \label{eq:Q03_UdtrykForC2(t)EfterAntagelseOmPopulation}
 \end{align}
-hvilket giver en fornuftig førsteordens approksimation, mens $c_2(t)$ forbliver lille. Vi interresserer os kun for de tilfælde, hvor lyset har en frekvens nær atomets ræsonansfrekvens -- da det kun er i disse tilfælde, at partiklerne i toniveausystemet vil interagere med lyset -- således at afvigelsen (eng. the detuning) er lille, $|\omega_0 - \omega| \ll \omega_0$, hvorved $\omega_0 + \omega \simeq 2\omega_0$. Vi kan derfor negligere det første led i \cref{eq:Q03_UdtrykForC2(t)EfterAntagelseOmPopulation}, da dette indeholder $\omega_0 + \omega$ i nævneren. Dette kaldes \textsf{roterende bølge-approksimationen}\footnote{Roterende bølge-approksimation (eng. rotating-wave approximation) er, at ledet med $(\omega + \omega_0)t$ oscillerer meget hurtigt, hvorfor dette i gennesnit bliver $0$ over en fornuftig interkationstid.}. Fra denne approksimation bliver sandsynligheden for at finde elektronen i den exciterede tilstand
+hvilket giver en fornuftig førsteordens approksimation, mens $c_2(t)$ forbliver lille. Vi interresserer os kun for de tilfælde, hvor lyset har en frekvens nær atomets ræsonansfrekvens -- da det kun er i disse tilfælde, at partiklerne i toniveausystemet vil interagere med lyset -- således at afvigelsen (eng. the detuning) er lille, $|\omega_0 - \omega| \ll \omega_0$, hvorved $\omega_0 + \omega \simeq 2\omega_0$. Vi kan derfor negligere det første led i \cref{eq:Q03_UdtrykForC2(t)EfterAntagelseOmPopulation}, da dette indeholder $\omega_0 + \omega$ i nævneren. Dette kaldes \textsf{roterende bølge-approksimationen}\footnote{Roterende bølge-approksimation (eng. rotating-wave approximation) er, at ledet med $(\omega~+~\omega_0)t$ oscillerer meget hurtigt, hvorfor dette i gennesnit bliver $0$ over en fornuftig interkationstid.}. Fra denne approksimation bliver sandsynligheden for at finde elektronen i den exciterede tilstand
 \begin{align}
     \abs{c_2(t)}^2 &= \abs{\Omega \dfrac{\sin\left(\dfrac{\omega_0 - \omega}{2}t\right)}{\omega_0 - \omega}} \: ,
 \end{align}
@@ -47,14 +47,15 @@ hvilket kan beskrives ved $x = (\omega_0 - \omega)t/2$,
 \begin{align} \label{eq:Q03_ExcitationProbabilityFunction}
     \abs{c_2(t)}^2 &= \frac{1}{4}\abs{\Omega}^2t^2\frac{\sin^2(x)}{x^2} = \frac{1}{4}\abs{\Omega}^2t^2\mathrm{sinc}^2(x) \: .
 \end{align}
-Sandsynlighedsfunktionen er afbilledet på \cref{fig:Q03_ExcitationProbabilityFunction}. Her kan man tydeligt se, at der er størst sandsynlighed for at observere systemet i den exciterede tilstand, når lysets frekvens $\omega$ er tæt ved atomets ræsonansfrekvens $\omega_0$, hvor amplituden også hurtigt aftager ved overtonerne, grundet den $x^{-2}$-ledet. Det kan også ses, at som tiden går, så vil sandsynligheden sprede sig ud og dermed aftage.
-
+Sandsynlighedsfunktionen er afbilledet på \cref{fig:Q03_ExcitationProbabilityFunction}.
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.75\textwidth]{Q03/images/ExcitationProbabilityFunction.PNG}
+    \includegraphics[width=0.65\textwidth]{Q03/images/ExcitationProbabilityFunction.PNG}
     \caption{Excitationssandsynligheden er størst idet, at det indsendte lys har en frekvens $\omega$, som stort set matcher atomets ræsonansfrekvens $\omega_0$. Functionens bredde er invers proportional med tiden, hvorfor sandsynligheden vil falde som tiden går.}
     \label{fig:Q03_ExcitationProbabilityFunction}
-\end{figure}
+\end{figure}\\
+%
+Her kan man tydeligt se, at der er størst sandsynlighed for at observere systemet i den exciterede tilstand, når lysets frekvens $\omega$ er tæt ved atomets ræsonansfrekvens $\omega_0$, hvor amplituden også hurtigt aftager ved overtonerne, grundet den $x^{-2}$-ledet. Det kan også ses, at som tiden går, så vil sandsynligheden sprede sig ud og dermed aftage.
 
 
 \paragraph{Resultatets sammenhæng med spektroskopiske eksperimenter:} \ldots
