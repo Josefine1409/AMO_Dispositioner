@@ -3,25 +3,54 @@
 
 \noindent
 \large
-Sammenligning med solsystem grundet $F_\text{Coulomb} \propto 1/r^2$\\
-Elektron i baner givet ved $F_\text{centripetal} = F_\text{Coulomb}$\\
-Find udtryk for $\omega^2 = v^2/r^2$\\
-Den totale energi i systemet\\
-Postulater fra Bohr: Kvantiserede baner og energitab kun ved kvantespring\\
-Problem I: Ingen stråling fra elektroner\\
-Find radius fra antagelse om kvantiseret impulsmoment\\
-Bohrs formel
+Sammenligning med solsystem grundet $F_\text{Coulomb} \propto 1/r^2$.\\
+Elektron i baner givet ved $F_\text{centripetal} = F_\text{Coulomb}$
+\begin{align*}
+    \frac{m_e v^2}{r} &= \frac{e^2}{4\pi\epsilon_0 r^2} \: .
+\end{align*}
+Den totale energi i systemet
+\begin{align*}
+    E &= T + U = \frac{1}{2}m_e v^2 - \frac{e^2}{4\pi\epsilon_0 r} = - \frac{e^2}{8\pi\epsilon_0 r} \: .
+\end{align*}
+Postulater fra Bohr:
 \begin{itemize}
-    \item Bølgetal ved Bohrs formel sammenlignet med bølgetal fra Rydbergs formel
-    \item Rydbergkonstanter stemmer stort set overens men\ldots
+    \item Kvantiserede baner: Kun baner med bestemte energier er tilladte.
+    \item Energitab fra elektronen foregår kun ved kvantespring mellem de tilladte baner.
 \end{itemize}
-Problem II: Antagelse om uendelig tung kerne
+Problem I: Ingen stråling fra elektroner
 \begin{itemize}
-    \item Løsning ved reduceret masse i stedet for \ldots
-    \item Isotropskift
+    \item Elektrodynamik: Accelererende ladede partikler udsender elektromagnetisk stråling (lys).
+    \item Bohr antog, at dette ikke skete, da ellers ville elektronerne jo kunne befinde sig mellem banerne grundet et energiniveau mellem det for de tilladte baner.
+    \item Bohrs antagelse stemmer overens med eksperimenter.
 \end{itemize}
-Problem III: Mangel på spin
+Find radius fra antagelse om kvantiseret impulsmoment ($m_e v r = n\hbar$)
+\begin{align*}
+    n\hbar &= m_e r \sqrt{\frac{e^2 r}{4\pi\epsilon_0 m_e r^2}} = m_e r \sqrt{\frac{e^2}{4\pi\epsilon_0 m_e r}} \\
+    \Rightarrow r &= \frac{4\pi\epsilon_0 \hbar^2}{e^2 m_e}n^2 = a_0 n^2 \: .
+\end{align*}
+Bohrs formel bliver derved (ved indsættelse af $r$ i $E$)
+\begin{align*}
+    E_n &= - \frac{e^2}{4\pi\epsilon_0 r} = - \frac{e^2}{4\pi\epsilon_0 a_0} \frac{1}{n^2} = \frac{E_1}{n^2}
+\end{align*}
+Bølgetal fra Bohrs formel
+\begin{align*}
+    \Tilde{\nu} &= R_\infty \left(\frac{1}{n^2} - \frac{1}{(n')^2}\right) \: .
+\end{align*}
+Bohrs fundne Rydbergkonstant stemmer stort set overens med den fra Rydbers formel, men der er en lille afvigelse
 \begin{itemize}
-    \item \ldots
+    \item Problem II: Antagelse om uendelig tung kerne
+    \begin{itemize}
+        \item Løsning ved reduceret masse i stedet for $m_e$, hvilket giver ''Rydberkonstantforholdet''
+        \begin{align*}
+            R_H = R_\infty \frac{m_p}{m_e + m_p} \simeq R_\infty \left(1 - \frac{m_e}{m_p}\right) \: , \quad \text{hvor} \quad \frac{m_e}{m_p} = \frac{1}{1836} \: .
+        \end{align*}
+        \item Isotopskift: Frekvensforskel i det udsendte lys fra forskellige isotoper grundet deres forskellige kernemasser.
+    \end{itemize}
+\end{itemize}
+Problem III: Diverse ikkemedtagne effekter
+\begin{itemize}
+    \item Medtager ikke spin $\Rightarrow$ Ingen forklaring af fin- og hyperfinstruktur.
+    \item Medtager ikke diverser relativistiske effekter.
+    \item Overholder ikke Heisenbergs usikkerhedsprincip, da vi antager at kende banen helt præcis.
 \end{itemize}
 \normalsize
