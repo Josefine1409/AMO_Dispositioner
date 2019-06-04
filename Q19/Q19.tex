@@ -47,4 +47,82 @@ Betragter vi $H_2^+$, hvis bølgefunktioner kan findes ved LCAO-approksimationen
 \end{figure}
 
 
-\paragraph{Van der Waals-bindinger:}
+\paragraph{Van der Waals-bindinger:} Kovalente bindinger er de stærkeste molekylære bindinger, men grundet de er kun dominerende så længe, at der er overlap mellem atomernes orbitaler. For afstande større end $R_c$ vil der dog stadig eksistere molekylære bindinger, men disse er dog meget svagere. Dette skyldes multipolekspansionen af atomerne, og at atomerne derved har danner elektriske felter, som kan vekselvirke med hinanden. Det skal dog noteres, at potentialerne vil være afhængige af den rummelige orientering af atomerne, og om de er eller ikke er ioniserede. Nogle af disse rummelige orienteringe kan ses på \cref{fig:Q19_RummeligeOrienteringer}. Der vil være den største tiltrækning, hvis de to dipoler er parallelle, mens den største frastødning opstår, hvis de to dipoler er antiparallelle.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{Q19/images/EnergiAfDipolerVedSpecifikkeKonfigurationer.PNG}
+    \caption{Potentiel energi af to elektriske dipoler med specifikke relative orienteringer.}
+    \label{fig:Q19_RummeligeOrienteringer}
+\end{figure}
+
+Placeres et neutralt atom uden et permanent dipolmoment i et elektrisk felt, så vil de modsatrettede kræfter, som påvirker de negative elektroner og den positive kerne, flytte elektronladningsfordelingen i den modsatte retning af kernen, se \cref{fig:Q19_ChargeDistributionShift}. Midtpunkterne for den positive og negative ladningsfordeling vil ikke længere være centrerede oveni hinanden, som i et neutralt atom uden et permanent dipolmoment, og dipolmomentet
+\begin{align}
+    \Vec{p}_A^{ind} &= \alpha_A \Vec{E}
+\end{align}
+induceres af det elektriske felt, og vil være parallelt med dette felt, se \cref{fig:Q19_InducedDipoleMoment}. Her er $\alpha_A$ den elektriske polarisabilitet af atom A, hvilken beskriver genoprettelseskræfterne (eng. the restoring forces) i atomet, som modvirker forskydningen og deformeringen af elektronladningsfordelingen.
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{Q19/images/ChargeDistributionShift.PNG}
+        \caption{Deformation og skift af eletronladningsfordelingen fra atom A grundet vekselvirkning med atom B.}
+        \label{fig:Q19_ChargeDistributionShift}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{Q19/images/InducedDipoleMoment.PNG}
+        \caption{Ladningen $q_A$ inducerer et dipolmoment $\Vec{p}_B$.}
+        \label{fig:Q19_InducedDipoleMoment}
+    \end{subfigure}
+    \caption{Inducerede dipolmomenter for to neutrale atomer.}
+    \label{fig:Q_19}
+\end{figure}
+
+Hvis atomet originalt var sfærisk symmetrisk, så ville tidsgennemsnittet af dette være 0, men grundet det instantane dipolmoment, så vil et neutralt atom B i nærheden af A også have et instantant induceret dipolmoment $\Vec{p}_B^{ind} = \alpha_B \Vec{E}$, som så vil inducere et dipolmoment i atom A, og fortsat sådan. Dermed vil tidsgennemsnittet af dipolmomentet ikke længere være 0. Denne vekselvirkning mellem de to atomers momentane dipolmomenter afhænger stadig af deres rummelige orientering i forhold til hinanden, og denne effekt kaldes Van der Waals-vekselvirkning.
+
+Den potentielle energi fra dipolvekselvirkningerne findes som
+\begin{align}
+    E_\text{pot}(R) &= -\Vec{p}_A^{ind} \cdot \Vec{E}_B = -\Vec{p}_B^{ind} \cdot \Vec{E}_A \: ,
+\end{align}
+hvor $\Vec{p}_A^{ind} = \alpha_A \Vec{E}_B$ og $\Vec{p}_B^{ind} = \alpha_B \Vec{E}_A$, hvormed den potentielle energi bliver $E_\text{pot}(R) \propto - \Vec{p}_A^{ind} \cdot \Vec{p}_B^{ind} = -\alpha_A \alpha_B \cdot |\Vec{E}|^2$, hvilket kan skrives som
+\begin{align}
+    E_\text{pot}(R) &= -C_1 \frac{\alpha_A \alpha_B}{R^6} = - \frac{C_6}{R^6} \: ,
+\end{align}
+hvor $C_1 = 1/(4\pi\epsilon_0)^2$ og $C_6 = \alpha_A \alpha_B /(4\pi\epsilon_0)^2$ er \textsf{Van der Waals-konstanten}. Dette er \textsf{Van der Waals-vekselvirkningspotentiale} (eng. Van der Waals interaction potential) mellem to neutrale atomer med polarisabiliteter $\alpha_A$ og $\alpha_B$.
+
+\textbf{Note:} Vekselvirkningen er tiltrækkened grundet det negative fortegn, og den aftager med $1/R^6$ med stigende afstand $R$. Af denne grund er det en kortrækkende vekselvirkning sammenlignet med Coulombvekselvirkningen, som er proportionel med $1/R$, men stadig har den en længe rækkevidde end den kovalente binding, som aftager eksponentielt med stigende afstand.\\
+
+
+\paragraph{Molekylepotentialer:} Mens Van der Waals-potentialet er en tilnærmelsesvis fin approksimation, så er der visse tilfælde, som den ikke tager højde for, da den negligerer højereordens multipolled, som quadropoler, oktopoler, osv.. Derudover giver den visse problemer, da der kun er et tiltrækkende led og ikke et frastødende.\\
+
+En bedre beskrivelse vil være at gøre brug af \textsf{Lenard-Jonespotentialet}, \cref{fig:Q19_LenardJonesPotential}, som er beskrevet ved
+\begin{align}
+    E_\text{pot}^\text{LJ}(R) &= \frac{a}{R^12} - \frac{b}{R^6} \: ,
+\end{align}
+hvor $a$ og $b$ er to parametre, som afhænger af de to atomer A og B, og disse vælges til at passe bedst muligt med den eksperimentelt fundne potentalkurve, idet Lenard-Jonespotentialet er et empirisk fundet potentiale.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=.45\textwidth]{Q19/images/LenardJonesPotential.PNG}
+    \caption{Lenard-Jonespotentialet}
+    \label{fig:Q19_LenardJonesPotential}
+\end{figure}\newpage
+$ $\\\\
+
+Et andet empirisk potential er \textsf{Morsepotentialet}, som har formen
+\begin{align}
+    E_\text{pot}(R) &= E_B \left[1 - \exp{-a(R-R_e)}\right] \: ,
+\end{align}
+hvilket med større præcision repræsenterer den tiltrækkende del af potentialet ift. de eksperimentelle værdier sammenlignet med det parabelpotentialet, se \cref{fig:Q19_MorsePotential}. Morsepotentialet konvergerer rigtigt nok mod adskillesesenergien (eng. the dissociation energy) for $R \rightarrow \infty$, mens parablen går mod uendelig med stigende afstand. Dog afviger Morsepotentialet mere fra det eksperimentelle potentiale for $R < R_e$ end parablen. Se \cref{fig:Q19_MorsePotential}.\\
+
+Morsepotentialet har den store fordel, at Schrödingerligningen for to vibrerende atomer i dette potential kan blive løst præcist.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=.65\textwidth]{Q19/images/MorsePotentialComparisonWithOtherPotentials.PNG}
+    \caption{Sammenligning af parabelpotentialet og Morsepotentialet med det reelle (eksperimentelle) potential.}
+    \label{fig:Q19_MorsePotential}
+\end{figure}
