@@ -96,4 +96,17 @@ Af \cref{eq:Q04_DotBlochVector} følger nogle vigtige egenskaber:
 \end{figure}
 
 
-\paragraph{Ekperiment beskrivet ved Blochvektorformalismen:} \ldots Atomuret
+\paragraph{Ekperiment beskrivet ved Blochvektorformalismen:} En metode, som an kan bruge til at kigge på detuningen -- helt præcist så er det egentlig at sammenligne frekvensen af feltet med atomets naturlige frekvens -- kaldes \textsf{Ramseymetoden}. Ved at ændre tiden mellem to pulse eller detuningen (altså det indsendte lys' vinkelfrekvens) vil sandsynligheden for at måle et atom som værende i den exciterede tilstand oscillere. Disse oscillationer kaldes \textsf{Ramsey fringes}, se \cref{fig:Q04_RamseyFringes}. Metoden\footnote{The method to exploit this effect in order to perform precise measurements of a frequency $\omega$ was proposed by Ramsey, who was awarded the Nobel prize for this idea in 1989.} foregår ved at man indsender en $\pi/2$-puls mod et atom, som starter ud i grundtilstanden. Dette sender atomet i en superposition. Hernæst holdes en pause på tiden $T$, hvorefter en ny $\pi/2$-puls sendes ind mod atomet, hvorved en af følgende ting sker:
+\begin{itemize}
+    \item Hvis der ikke er en detuning ($\delta = 0$) således, at vinkelfrekvensen af det indsendte lys (det elektromagnetiske felt) er præcis lig atomets resonansfrekvens, så vil den anden $\pi/2$-pulse flippe Blochvektoren til at være præcis i den exciterede tilstand, hvilket kan måles.
+    \item Hvis der dog er en detuning, så vil Blochvektoren rotere i en vinkel $\theta$ til $\Vec{W}$ \footnote{Jeg har læst mig til, at denne vinkel skulle være $\delta T$. \url{https://www.physik.hu-berlin.de/de/nano/lehre/copy_of_quantenoptik09/Chapter7}, side 81.} Den anden $\pi/2$-puls vil som regel ikke dreje Blochvektoren til præcis den exciterede tilstand, og i nogle tilfælde vil denne kunne blive drejet tilbage til grundtilstanden. Retningen, som $\pi/2$-pulsen sender elektronen, er givet ved krysproduktet $\Dot{\Vec{R}} = \Vec{R} \cross \Vec{W}$, altså en hastighed i en bestemt retning i præciseringen af $\Vec{R}$ omkrign $\Vec{W}$.
+\end{itemize}
+I et Ramseyinterferometer adskilles de to pulse af så stor en afstand som muligt for at få størst mulig sensitivitet, siden denne ikke er begrænset af tiden, hvor atomet bliver udsat for lyspulsen.\\
+Ramsey metoden bliver brugt i moderne atomure, f.eks. cæsiumure, til at stabilisere et radiofrekvensfelt til at have den tættest mulige frekvens på atomets resonansfrekvens, da dette giver mindre usikkerhed ift. om der er sket en anden overgang end den, som bruges til at bestemme sekundet.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=.6\textwidth]{Q04/images/RamseyFringes.PNG}
+    \caption{Ramsey fringes fra en atomic fountain af cæsium, som viser sandsynligheden for overgang mellem $F = 3$, $M_F = 0$ tilstanden til $F 0 4$, $M_F = 0$ tilstanden som funktion af frekvensen af mikrobølgestråling i området nær atomets naturlige frekvens.}
+    \label{fig:Q04_RamseyFringes}
+\end{figure}
