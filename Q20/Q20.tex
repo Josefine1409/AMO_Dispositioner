@@ -46,7 +46,7 @@ og benytter vi os af Born-Oppenheimerapproksimationen ($\Rightarrow c_{nm} = 0 \
 hvilke kan løses hver for sig, da koblingsledet er blevet negligeret.
 Den første ligning beskriver en elektronbølgefunktionen for et stift (eng. rigid) molekyle, hvor elektronerne er i tilstanden $n,\, L,\, \Lambda$ og energien (uden den kinetiske energi af kernen) er $E^{(0)}$. Den anden ligning indeholder den kernens kinetiske energi $T_k$ og beskriver kernens bevægelse i potentialet $E_n^{(0)} = \braket{E_\text{kin}^{el}} + E_\text{pot}(\Vec{r}_i, \Vec{R}_k)$, hvilket, når man skifter til massemidtpunktssystemet med den reducerede masse $M = M_A M_B / (M_A + M_B)$, hvor A og B er de to atomer, giver et sfærisk symmetrisk potentiale
 \begin{align} \label{eq:Q20_EquationWithSphericalSymmetricPotential}
-    \left[\frac{-\hbar^2}{2M}\Vec{\nabla}^2 + E_\text{pot}^(n)(R)\right] \chi_{n,m}(\Vec{R}) &= E_{n,m}\chi_{n,m}(\Vec{R}) \: ,
+    \left[\frac{-\hbar^2}{2M}\Vec{\nabla}^2 + E_\text{pot}^{(n)}(R)\right] \chi_{n,m}(\Vec{R}) &= E_{n,m}\chi_{n,m}(\Vec{R}) \: ,
 \end{align}
 hvor indekset $m$ giver den $m$'te kvantetilstand af kernens bevægelse (vibrations-rotationstilstanden). Det vigtige er her at notere, at der er tale om sfærisk symmetri, hvorfor potentialet kun afhænger af $R$, selvom bølgefunktionerne stadig afhænger af alle de sfæriske korrdinater.
 
@@ -76,7 +76,7 @@ hvor $J(J+1)$ er separationskonstanten.
 \end{figure}
 
 
-\paragraph{Sammenhæng af vibration og rotation:} I virkeligheden er verden dog ikke så sort/hvid, at molekyler enten roterer eller vibrerer; de gør selvfølgelig begge dele, og deres bevægelse vil komme til at blive beskrevet som på \cref{fig:Q20_VibratingRotor}. Siden den totale energi af molekylet $E = E_\text{rot} 0 E_\text{vib} + E_\text{pot}$ skal være konstant ($\Dot{E} = 0$) må der findes en periodisk relation for ombytningen af vibrationel energi, rotationel energi og potentiel energi. Dog er det meget besværligere at løse for et sådan system, og dette kan kun gøre ved brud af mange approksimationer og udviklinger (eng. expansions).
+\paragraph{Sammenhæng af vibration og rotation:} I virkeligheden er verden dog ikke så sort/hvid, at molekyler enten roterer eller vibrerer; de gør selvfølgelig begge dele, og deres bevægelse vil komme til at blive beskrevet som på \cref{fig:Q20_VibratingRotor}. Siden den totale energi af molekylet $E = E_\text{rot} + E_\text{vib} + E_\text{pot}$ skal være konstant ($\Dot{E} = 0$) må der findes en periodisk relation for ombytningen af vibrationel energi, rotationel energi og potentiel energi. Dog er det meget besværligere at løse for et sådan system, og dette kan kun gøre ved brud af mange approksimationer og udviklinger (eng. expansions).
 
 \begin{figure}[!h]
     \centering
