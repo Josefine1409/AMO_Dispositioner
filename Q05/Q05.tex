@@ -3,32 +3,108 @@
 
 Hydrogen er det simpleste atom, og det eneste atom, som kan løses analytisk ved brug af Schrödingerligningen. Løsningen af hydrogenatomer kan overføres til andre atomer med samme egenskaber, altså alkalimetaller, som også kun har én enkelt valenselektron.
 
-
-
+Dor hydrogen, hvis potentiale er et Coulombpotential, hvorfor det er sfærisk symmetrisk, vil have følgende Schrödingerligning
 \begin{align}
-    \left(-\frac{\hbar^2}{2m}\Vec{\nabla}^2 + V(r)\right)\psi &= E\psi
+    \left(-\frac{\hbar^2}{2m}\Vec{\nabla}^2 + V(r)\right)\psi &= E\psi \: ,
 \end{align}
-
-\begin{align}
-    \Vec{\nabla}^2 &= \frac{1}{r} \frac{\partial}{\partial r}\left(r^2 \frac{\partial}{\partial r}\right) - \frac{1}{r^2}\Vec{l}^2
+hvor den sfæriske Laplaceoperator er
+\begin{align} \label{eq:Q05_SphericalNabla^2}
+    \Vec{\nabla}^2 &= \frac{1}{r} \frac{\partial}{\partial r}\left(r^2 \frac{\partial}{\partial r}\right) - \frac{1}{r^2}\Vec{l}^2 \: ,
 \end{align}
-
+med
 \begin{align}
     \Vec{l} &= \frac{1}{\hbar} \Vec{r} \cross \Vec{p} \: , \quad \text{hvor} \quad \Vec{p} = -i\hbar\Vec{\nabla}
 \end{align}
-
+værende impulsmomentoperatoren. I sfæriske koordinater vil denne altså være
 \begin{align}
-    \Vec{l}^2 &= -\left\{\frac{1}{\sin(\theta)}\frac{\partial}{\partial \theta}\left(\sin(\theta)\frac{\partial}{\partial \theta}\right) + \frac{1}{\sin^2(\theta)}\frac{\partial^2}{\partial \phi^2}\right\}
+    \Vec{l}^2 &= -\left\{\frac{1}{\sin(\theta)}\frac{\partial}{\partial \theta}\left(\sin(\theta)\frac{\partial}{\partial \theta}\right) + \frac{1}{\sin^2(\theta)}\frac{\partial^2}{\partial \phi^2}\right\} \: ,
+\end{align}
+hvilket kun er afhængig af vinkelafstanden (eng. the angular distance).
+
+Grundet det sfærisk symmetriske potentiale kan vi benytte separation af de variable til at opdele elektronens bølgefunktion i en radiær del og en vinkeldel
+\begin{align}
+    \psi &= R(r)Y(\theta,\phi) \: .
+\end{align}
+Benytter vi denne bølgefunktion i Schrödingerligningen får vi en opsplitning i en radiærdel og en vinkeldel
+\begin{align} \label{eq:Q05_EquationToLaterUse}
+    &\frac{1}{R}\frac{\partial}{\partial r} \left(r^2 \frac{\partial R}{\partial r}\right) - \frac{2m_er^2}{\hbar^2}\left(V(r) - E\right) = \frac{1}{Y}\Vec{l}^2Y \: .
+\end{align}
+Idet at hver side af lighedstegnet afhænger af en forskellig variabel, så vil ligheden kun være opfyldt, hvis begge sider er lig en konstant, som vi kalder $b$, således
+\begin{align} \label{eq:Q05_EigenvalueEquation}
+    \Vec{l}^2Y &= bY \: ,
+\end{align}
+hvilket er en egenværdiligning med egenfunktionerne $Y(\theta,\phi)$, og $b$ er separationskonstanten.
+
+
+\paragraph{Vinkelløsning:} Ved endnu en gang at benytte separation af variable, nu kun på vinkeldelen, kan denne skrives som produktet af en azimutal og en polær funktion
+\begin{align}
+    Y(\theta,\phi) &= \Theta(\theta)\Phi(\phi) \: ,
+\end{align}
+og benyttes denne i egenværdiligningen \cref{eq:Q05_EigenvalueEquation} findes
+\begin{align} \label{eq:Q05_KonstantLigning}
+    \frac{\sin(\theta)}{\Theta} \frac{\partial}{\partial \theta} \left(\sin(\theta)\frac{\partial\Theta}{\partial\theta}\right) + b \sin^2(\theta) &= -\frac{1}{\Phi}\frac{\partial^2\Phi}{\partial\phi^2} = m^2 \: ,
+\end{align}
+hvor $m^2$ er separationskonstanten (dette kommer af den harmoniske oscillatorløsning, som vi ser i \cref{eq:Q05_HarmoniskOscillatorLoesning}).\\
+
+\underline{Azimutalløsning:} Betragter vi den sidste lighed i \cref{eq:Q05_KonstantLigning}, så kan det ses, at denne er på formen for en simpel harmonisk oscillator bevægelse, hvorfor vi løsningen til den azimutale funktion til at være
+\begin{align} \label{eq:Q05_HarmoniskOscillatorLoesning}
+    \Phi(\phi) &= \exp{i m \phi} \: .
+\end{align}
+Faktisk så er der to løsninger: $\exp{\pm i m \phi}$, men den ''negative'' løsning bliver medtaget ved senere at lade $m$ være negativ. Der kunne lige så godt være en konstant ganget på denne løsning, men denne lader vi være opslugt af $\Theta$.
+
+Idet $\phi$ bevæger sig $2\pi$, så vil vi komme tilbage til samme punkt i rummet, og siden bølgefunktioner vil have en unik værdi på det bestemte sted stilles kravet
+\begin{align}
+    \Phi(\phi + 2\pi) &= \Phi(\phi) \Rightarrow \exp{2\pi i m} = \exp{0} = 1 \: .
+\end{align}
+Af dette kan det ses, at $m \in \mathbb{Z}$. Dette kaldes det \textsf{magnetiske kvantetal}.\\
+
+\underline{Polær løsning:} Løsningen af den polære funkktion er ikke lige så let, idet den beskrives ved Legendrefunktionerne
+\begin{align}
+    P_l^m &\equiv \left(1 - x^2\right)^{|m|/2}\left(\frac{\text{d}}{\text{d}x}\right)^{|m|}P_l(x) \: ,
+\end{align}
+som afhænger af Legendrepolynomierne
+\begin{align}
+    P_l(x) &\equiv \frac{1}{2^l l}\left(\frac{\text{d}}{\text{d}x}\right)^l (x^2 - 1)^l \: ,
+\end{align}
+hvor vi for vores løsninger substituerer $x = \cos(\theta)$.
+
+Fra Legendrefunktionen kan vi se, at hvis $|m| > 1$, så vil $P_l^m = 0$, da vi differentierer flere gange end polynomiets grad. Dette giver begrænsningen af $m \in [-l;\, l]$ i heltalsskridt, idet at det ikke giver fysisk mening at have ikke-heltalsværdier af $m$ og $l$.
+Ved at sætte $l = \max(m)$ finder vi separationskonstanten $b = l(l+1)$, hvilket er \textsf{azimutalkvantetallet}.
+
+
+\paragraph{Radiær løsning:} Ved at indsætte den fundne separationskonstant i \cref{eq:Q05_EquationToLaterUse}, og indsætte Coulombpotentialet $V(r) = -e^2/(4\pi\epsilon_0 r)$, samt skrive ligningen smart ved substitution med $P(r) = rR(r)$, da fås ligningen
+\begin{align}
+    -\frac{\hbar^2}{2m_e}\frac{\text{d}^2P}{\text{d}r^2} + \left\{\frac{\hbar^2}{2m_e}\frac{l(l+1)}{r^2} - \frac{e^2}{4\pi\epsilon_0 r}\right\}P &= 0 \: .
+\end{align}
+Ledet som er proportionalt til $l(l+1)/r^2$ er den kinetiske energi forbundet med vinkelfrihedsgraderne (eng. the angular degrees of freedom). Denne radiære ligning viser et effektivt potential, som holder bølgefunktioner med $l \ne 0$ væk fra origo. Deles igennem med $E = -|E|$ (en negativ værdi siden $E \le 0$ for en bunden tilstand), og laves substitutionen
+\begin{align}
+    \rho^2 &= \frac{2m_e|E|r^2}{\hbar^2} \: ,
+\end{align}
+så reduceres ligningen til dimensionsløs form:
+\begin{align}
+    \frac{\text{d}^2P}{\text{d}\rho^2} + \left\{-\frac{l(l+1)}{\rho^2} + \frac{\lambda}{\rho} - 1\right\}P &= 0 \: ,
+\end{align}
+hvor $\lambda$ er konstanten, som karakteriserer Coulombvekselvirkningens styrke,
+\begin{align}
+    \lambda &= \frac{e^2}{4\pi\epsilon_0} \sqrt{\frac{2m_e}{\hbar^2|E|}} \: .
 \end{align}
 
+Standardmetoden til at løse sådanne differentialligninger er at finde en løsning på formen af potensrækker. Disse skal have en endelig sum grundet normaliseringskravet; de skal altså slutte ved $N$, og de skal divergere, når $\lambda = 2n$ for $n \in \mathbb{N}$. Den generelle form at sådanne ligninger er
 \begin{align}
-    \psi &= R(r)Y(\theta,\phi)
+    P(\rho) &= C\exp{-\rho}v(\rho) \: ,
+\end{align}
+hvor $v(\rho)$ er en anden funktion, som afhænger af det radiære koordinat, og som har en polynomisk løsning.
+
+Dermed bliver energien
+\begin{align} \label{eq:Q05_Energi}
+    E_n &= -\left[\frac{m}{2\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\right]\frac{1}{n^2} = \frac{E_1}{n^2} \: , \quad \forall n \in \mathbb{N}\arraybackslash\{0\} \: ,
+\end{align}
+hvilket er Bohrs formel, og $l$ for et givent $n$ er $l \in \{0,\, 1,\, \ldots,\, n-1\}$.
+
+Den samlede bølgefunktion bliver
+\begin{align}
+    \psi_{nlm} &= R_{nl}(r)Y_l^m(\theta,\phi) \: .
 \end{align}
 
-\begin{align}
-    &\frac{1}{R}\frac{\partial}{\partial r} \left(r^2 \frac{\partial R}{\partial r}\right) - \frac{2m_er^2}{\hbar^2}\left(V(r) - E\right) = \frac{1}{Y}\Vec{l}^2Y = b \\
-    &\Rightarrow \begin{cases}
-        \Vec{l}^2Y = bY \\
-        -\frac{\hbar^2}{2m_e} \frac{\partial^2P}{\partial r^2} + \left(\frac{b}{2m_er^2} - \frac{e^2}{4\pi\epsilon_0 r}\right) = EP \: , \quad P = rR(r)
-    \end{cases}
-\end{align}
+
+\paragraph{Udartethed:} Af \cref{eq:Q05_Energi} er det tydeligt, at energien kun afhænger af hovedkvantetallet, mens separationskonstanten $m$ kun indgår i den vinkelafhængige funktion og ikke den radiære, hvorfor denne vil være udartet (eng. degenerate). Udartetheden i $l$ og $m_l$ giver også mening, da der kan eksistere flere tilfælde med samme hovedkvantetal men forskelligt azimutalkvantetal og dermed forskelligt magnetisk kvantetal. Udartetheden i $l$ er en egenskab ved Coulombpotentialet, mens udartetheden i $m_l$ tydeligt kan ses grundet, at atomers egenskaber er uafhængige af atomets rummelige orientering, så længe atomet ikke vekselvirker med et eksternt magnetfelt.
