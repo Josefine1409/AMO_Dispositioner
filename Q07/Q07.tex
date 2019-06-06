@@ -1,4 +1,123 @@
 \subsection{Outline how the selection rules for $m$, $l$, and $s$ were obtained and explain them based on the angular momentum of the photon. Under what condition are these selection rules valid?}
 
 
-\ldots
+Udvalgsregler (eng. selection rules) benyttes til at bestemme, hvilke overgange i et atom, som er tilladte. Mere specifikt kan disse benyttes til at beskrive, hvornår matrixelementet, som beksriver overgangssandsynligheden vil være 0, altså hvornår vi ikke behøver at udregne det sfæriske integral, og hvornår det er nødvendigt.\\
+
+
+\paragraph{Udvalgsregler baseret på fotonens impulsmoment:} Udvalgsreglen for $l$ kan vi også finde ud fra vekselvirkningen med en foton, idet fotonen har et impulsmoment på $1$ (i enheder af $\hbar$). Idet fotonen vekselvirker med en elektron optagere denne fotonen og dermed også dens impulsmoment, så grundet impulsmomentbevarelse må der ske end ændring med $\Delta l = \pm 1$, hvor fortegnet skyldes retningen af fotonens impulsmoment i forhold til elektronens.\\
+Udvalgsreglen for $m$ ($\Delta m = 0,\, \pm 1$) kan ses som værende fotonens impulsmoment langs $z$-aksen, så vi kan enten have impulsmomentet op eller ned ($\Delta m = \pm 1$) eller i en anden retning ($\Delta m = 0$).\\
+Impulsmomentbevarelse forklarer dog ikke, hvorfor $\Delta l \ne 0$, hvilket kommer af pariteten\footnote{Læs \textit{Atomic Physics} af Christopher J. Foot, afsnit 2.2.3.}
+
+
+\paragraph{Udvalgsregler fra dipolapproksimationen:} Som resultat af tidsafhængig perturbationsteori har vi Fermis gyldne regel, hvilken fortæller, at overgangsraten er proportional med kvadratet af matrixelementet af perturbationen. Hamiltonoperatoren, som beskriver den tidsafhængige vekselvirkning mellem et atom og det elektriske felt er givet ved
+\begin{align}
+    H' &= e\Vec{r} \cdot \Vec{E}(t) \: , \quad \text{hvor} \quad \Vec{E}(t) = |\Vec{E}_0|\Re{\exp{-i\omega t}\Hat{e}_\text{rad}} \: ,
+\end{align}
+hvor den elektriske dipoloperator er $-e\Vec{r}$. Denne vekselvirkning med stråling stimulerer overgange fra $\ket{1}$ til $\ket{2}$ med raten
+\begin{align}
+    \text{Rate} \propto |e\Vec{E}_0|^2 \abs{\int \psi_2^* (\Vec{r} \cdot \Hat{e}_\text{rad} \psi_1 \, \text{d}^3\Vec{r}}^2 \equiv \abs{e\Vec{E}_0}^2 \cross \abs{\bra{2}\Vec{r}\cdot\Hat{e}_\text{rad}\ket{1}}^2 \: .
+\end{align}
+Denne beskrivelse antager, at amplituden af det elektriske felt er uniform over hele atomet, sådan at den kan blive taget udenfor integralet over de atomare bølgefunktioner; altså grundet \textsf{dipolapproksimationen} ($\lambda \gg a_0$) vil $\Vec{E}_0$ ikke være afhængig af $\Vec{r}$.
+
+Dipolmatrixelementet kan skrives som et produkt af af et radiær og et vinkelafhængig integral
+\begin{align}
+    \bra{2}\Vec{r}\cdot\Hat{e}_\text{rad}\ket{1} &= D_{12}\mathcal{I}_\text{ang} \: ,
+\end{align}
+hvor det radiære integral er
+\begin{align}
+    D_{12} &= \int_0^\infty R_{n_2,l_2}(r) r R_{n_1,l_1}(r) r^2 \, \text{d}r \: ,
+\end{align}
+og det vinkelafhængige integral er
+\begin{align} \label{eq:Q07_AngularIntegral}
+    \mathcal{I}_\text{ang} &= \int_0^{2\pi}\int_0^\pi Y_{l_2,m_2}^*(\theta,\phi) \Hat{r} \cdot \Hat{e}_\text{rad} Y_{l_1,m_1}(\theta,\phi) \sin(\theta) \, \text{d}\theta \, \text{d}\phi \: ,
+\end{align}
+hvor $\Hat{r} = \Vec{r}/r$.
+Det radiære integral er normalt ikke 0, selvom det kan være meget småt for overgange mellem tilstande, hvis radiære bølgefunktioner har et lille overlap, f.eks. når $n_1$ er lille og $n_2$ er stor eller vice versa. Modsat så vil $\mathcal{I}_\text{ang} = 0$ medmindre strikse kriterier er opfyldt. Disse kriterier kaldes udvalgsreglerne.\\
+
+Udvalgsrelgerne opstår fra det vinkelafhængige integral i \cref{eq:Q07_AngularIntegral}, hvilket indeholder afhængigheden af vekselvirkningen $\Hat{r}\cdot\Hat{e}_\text{rad}$ for en given polarisation af strålingen. Matematikken kræver, at vi udregner $\mathcal{I}_\text{ang}$ for et atom med en veldefineret kvantiseringsakse (valg til at være $z$-aksen) og for stråling, som har en veldefineret polarisation og udbredelsesretning. Dette er svarende til den fysiske situation af et atom behandlet med Zeemaneffekten fra et ekstrent magnetisk felt. Behandlingen af Zeemaneffekten som en klassisk oscillator viste, at komponenter med forskellig frekvens vil have forskellig polarisation i Zeemanopsplitningen. Vi benytter os af polariseringerne $\pi$ og $\sigma$ for hhv. lineært og cirkulært polariseret lys.
+
+For at beregne $\mathcal{I}_\text{ang}$ omskrives enhedsvektoren $\Hat{r}$ til retningen af den inducerede dipol
+\begin{align}
+    \Hat{r} &= \frac{1}{r}(x\Hat{e}_x + y\Hat{e}_y + z\Hat{e}_z) = (\sin(\theta)\cos(\phi)\Hat{e}_x + \sin(\theta)\sin(\phi)\Hat{e}_y + \cos(\theta)\Hat{e}_z) \: .
+\end{align}
+Udtrykkes funktionerne af $\theta$ og $\phi$ ved de sfærisk harmoniske funktioner fås
+\begin{align} \label{eq:Q07_SpericalHarmonicsAsCosAndSine}
+    \sin(\theta)\cos(\phi) &= \sqrt{\frac{2\pi}{3}}(Y_{1,-1} - Y_{1,1}) \: , \nonumber\\
+    \sin(\theta)\sin(\phi) &= \sqrt{\frac{2\pi}{3}}(Y_{1,-1} + Y_{1,1}) \: , \\
+    \cos(\theta) &= \sqrt{\frac{2\pi}{3}}Y_{1,0} \: ,
+\end{align}
+hvilket leder til
+\begin{align} \label{eq:Q07_rAsY}
+    \Hat{r} \propto Y_{1,-1} \frac{\Hat{e}_x + i\Hat{e}_y}{\sqrt{2}} + Y_{1,0} \Hat{e}_z + Y_{1,1} \frac{-\Hat{e}_x + i\Hat{e}_y}{\sqrt{2}} \: .
+\end{align}
+Den generelle polariseringsvektor kan skrives som
+\begin{align}
+    \Hat{e}_\text{rad} = A_{\sigma^-} \frac{\Hat{e}_x + i\Hat{e}_y}{\sqrt{2}} + A_\pi \Hat{e}_z + A_{\sigma^+} \left(-\frac{\Hat{e}_x + i\Hat{e}_y}{\sqrt{2}}\right) \: ,
+\end{align}
+hvor $A_\pi$ afhænger af komponenten af det elektriske felt langs $z$-aksen, og komponenten i $xy$-planet er skrevet som en superposition af to cirkulære polarisationer med amplituder $A_{sigma^\pm}$.
+
+fra udtrykket for $\Hat{r}$ beskrevet ved $Y_{l,m}(\theta,\phi)$, \cref{eq:Q07_rAsY}, med $l=1$ finder vi, at det inducerede dipolmoment i atomet er proportionelt med
+\begin{align} \label{eq:Q07_HatRPrikERadACoefficienter}
+    \Hat{r} \cdot \Hat{e}_\text{rad} \propto A_{\sigma^-} Y_{1,-1} + A_\pi Y_{1,0} + A_{\sigma^+} Y_{1,1} \: .
+\end{align}
+
+
+\paragraph{Udvalgsregler for $m$:} Først kigger vi på \textsf{lineært polariseret lys} ($\pi$-overgange) langs $z$-aksen. For lineært polariseret lys ser vi, af \cref{eq:Q07_HatRPrikERadACoefficienter,eq:Q07_SpericalHarmonicsAsCosAndSine}, at vil vil få $\Hat{r}\cdot\Hat{e}_\text{rad} \propto \cos(\theta)$, så
+\begin{align}
+    \mathcal{I}_\text{ang}^\pi &= \int_0^{2\pi}\int_0^\pi Y_{l_2,m_2}^*(\theta,\phi) \cos(\theta) Y_{l_1,m_1}(\theta,\phi) \sin(\theta) \, \text{d}\theta \, \text{d}\phi \: .
+\end{align}
+Vi observerer, at vi kan flytte de kun $\theta$-afhængige dele uden for $\phi$-integralet, hvorved vi får
+\begin{align}
+    \mathcal{I}_\text{ang} &= \int_0^\pi \cos(\theta)\sin(\theta) \int_0^{2\pi} Y_{l_2,m_2}^*(\theta,\phi) Y_{l_1,m_1}(\theta,\phi) \, \text{d}\phi \, \text{d}\theta \: ,
+\end{align}
+hvor
+\begin{align}
+    \mathcal{I}_\text{ang} &\propto \int_0^{2\pi} Y_{l_2,m_2}^*(\theta,\phi) Y_{l_1,m_1}(\theta,\phi) \, \text{d}\phi \propto \delta_{m_1,m_2} \: .
+\end{align}
+Det kan altså ses, at $\Delta m = 0$ for $\pi$-polarisation, hvis vinkelintegralet skal være forskelligt fra 0.\\
+
+Nu kigges på \textsf{cirkulært polariseret lys} ($\sigma^\pm$-overgange) i $xy$-planet. Her kan det ses, fra \cref{eq:Q07_HatRPrikERadACoefficienter}, at $\Hat{r}\cdot\Hat{e}_\text{rad} \propto Y_{1,\pm 1}$, så
+\begin{align}
+    \mathcal{I}_\text{ang}^\pi &= \int_0^{2\pi}\int_0^\pi Y_{l_2,m_2}^*(\theta,\phi) Y_{1,\pm 1} Y_{l_1,m_1}(\theta,\phi) \sin(\theta) \, \text{d}\theta \, \text{d}\phi \: .
+\end{align}
+Det vides, at de sfærisk harmoniske bølgefunktioner multipliceres på følgende måde
+\begin{align} \label{eq:Q07_MultiplySphericalHarmonics}
+    Y_{l,m}Y_{l',m'} &= A Y_{l'+l,m'+m} + B Y_{l'-l,m'+m} \: ,
+\end{align}
+hvor $A$ og $B$ er konstanter hvis værdi ikke er interessant for os, hvorfor
+\begin{align}
+    Y_{1,\pm 1}Y_{l_1,m_1} &= A Y_{l_1 + 1,m_1 \pm 1} + B Y_{l_1-1,m_1\pm 1} \: .
+\end{align}
+Gøres som for den lineære polarisering og trækker $\theta$-afhængige elementer udenfor integralet, så fås $\phi$-integralet som følgende
+\begin{align}
+    \mathcal{I}_\text{ang} &\propto \int_0^{2\pi} Y_{l_2,m_2}^*(\theta,\phi) \left\{A Y_{l_1 + 1,m_1 \pm 1} + B Y_{l_1-1,m_1\pm 1}\right\} \, \text{d}\phi \propto A\delta_{m_1\pm1,m_2} + B\delta_{m_1\pm1,m_2} \: ,
+\end{align}
+hvilket giver udvalgsreglen $\Delta m = \pm 1$.\\
+
+Udvalgsreglen for $m$ er derved $\Delta m = 0,\, \pm 1$.
+
+
+\paragraph{Udvalgsregler for $l$:} For $l$ findes udvalgsreglerne nu ved at betragte vinkelintegralet, men nu bekymrer vi os kun om $\theta$-delen, da vi har fundet udvalgsreglerne baseret på $\phi$-afhængigheden. For begge typer polarisation er der tale om sfærisk harmoniske funktioner med $l = 1$ ($\Hat{r}\cdot\Hat{e}_\text{rad} \propto Y_{1,m}$), hvorved vores vinkelintegral bliver
+\begin{align}
+    \mathcal{I}_\text{ang}^\pi &= \int_0^{2\pi}\int_0^\pi Y_{l_2,m_2}^*(\theta,\phi) Y_{1,m} Y_{l_1,m_1}(\theta,\phi) \sin(\theta) \, \text{d}\theta \, \text{d}\phi \: .
+\end{align}
+Der gøres igen brug af \cref{eq:Q07_MultiplySphericalHarmonics}, hvilket giver
+\begin{align}
+    Y_{1,m}Y_{l_1,m_1} &= A Y_{l_1 + 1,m_1+m} + B Y_{l_1-1,m_1+m} \: ,
+\end{align}
+hvorved vi ud fra ortogonaliteten af de sfærisk harmoniske funktioner (som vi også gjorde de andre gange) finder
+\begin{align}
+    \mathcal{I}_\text{ang} &\propto A \delta{l_2,l_1+1} + B \delta{l_2,l_1-1} \: ,
+\end{align}
+hvorved vi ser, at udvalgsreglen for $l$ skal være $\Delta l = \pm 1$.
+
+
+\paragraph{Udvalgsregler for spin:} Udvalgsreglen for spin er meget enkel. Det totale spinkvantetal ændres ikke ved overgange grundet den elektriske dipolapproksimation. I matrixelementet vil man få
+\begin{align}
+    \bra{\Psi_\text{final}}r\ket{\Psi_\text{initial}} \: ,
+\end{align}
+men operatoren $r$ virker ikke på spinet, hvorfor man vil få (''final'' skrives f og ''initial'' i)
+\begin{align}
+    \braket{\chi_f}{\chi_i}\bra{\psi_f}r\ket{\psi_i} \propto \delta_{f,i} \: ,
+\end{align}
+altså matrixelementet vil give 0, medmindre $\Delta s = 0$.
