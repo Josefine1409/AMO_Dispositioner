@@ -63,10 +63,63 @@ Indsættes denne bølgefunktion i \cref{eq:Q20_EquationWithSphericalSymmetricPot
 hvor $J(J+1)$ er separationskonstanten.
 
 
-\paragraph{Rotation:}
+\paragraph{Rotation:} Et diatomart molekyle med atommasserne $M_A$ og $M_B$ kan rotere omkring enhver akse genne atomets massemidtpunkt, som også er vinkelret på aksen, hvorpå afstanden mellem atomerne regnes. Denne rotation sker med vinkelhastighed $\omega$, hvorved den inertimomentet af molekylet er $I = MR^2$ med respekt til den rotationelle aksen, hvor $M = M_A M_B / (M_A + M_B)$ er den reducerede masse, og $|\Vec{J}| = I \omega$ er dets impulsmoment. Vi får dermed følgende Hamiltonoperator for rotationen
+\begin{align}
+    \Hat{H}_\text{rot} &= \frac{1}{2} I \omega^2 = \frac{J^2}{2I} \: .
+\end{align}
+Siden $J$ kun tage tage diskrete værdier af $\braket{\Vec{J}^2} = \hbar^2 J(J+1)$, så vil den rotationelle energi blive (ved perturbationsteori)
+\begin{align}
+    E_\text{rot} &= \braket{\Hat{H}_\text{rot}} = \frac{J(J+1)\hbar^2}{2MR_2^2} \: ,
+\end{align}
+hvor $R_e$ er ligevægtsafstanden.
+
+Denne model er ikke komplet, da vi har antaget, at der er tale om et stift (eng. rigid) molekyle. Centrifugalkraften vil øge afstanden mellem de to atomer for et ikke-stift (eng. non-rigid) molekyle, indtil en genoprettelseskraft (eng. restoring force) opretter en ny ligevægtsafstand. I nærheden af ligevægtsafstanden $R_e$ kan potentialet approksimeres med en parabel, hvilket leder til en lineær gnoprettelseskraft
+\begin{align}
+    
+\end{align}
+Fra raltionen $F_\text{centripetal} = \F_\text{restoring}$ får vi, at
+\begin{align}
+    M\omega^2 R &= k(R - R_2) = \frac{J(J+1)\hbar^2}{MR^3} \: ,
+\end{align}
+hvilket giver den nye ligevægtsafstand
+\begin{align}
+    R &= \Re{1 + \frac{J(J+1)\hbar^2}{Mk R_e^4}} \: ,
+\end{align}
+hvilket viser, at vi får forøget ligevægtsafstanden grundet rotationen.
 
 
-\paragraph{Vibration:}
+\paragraph{Vibration:} Vi antager, at molekylet ikke roterer, hvorved $J = 0$. Omkring ligevægtsafstanden kan potentialet approksimeres til en parabel, så $E_\text{pot} \approx k_r (R-R_e)^2 / 2$. Hvis vi vælger $R_e = 0$ får vi
+\begin{align}
+    E_\text{pot} \approx \frac{1}{2}k_rR^2 = \frac{1}{2}MR^2 \: , \quad \text{hvor} \quad \omega = \sqrt{\frac{k_r}{M}} \: .
+\end{align}
+Indsættes dette i Schrödingerligningen fås den harmoniske oscillator
+\begin{align}
+    E_\text{vib} &= \left(v + \frac{1}{2}\right)\hbar\omega \: ,
+\end{align}
+hvilket afhænger af diskrete værdier: $v = 0,\, 1,\, 2, \, \ldots$, med energiforskel $\Delta E = \hbar\omega$. Dette er kun en god approksimation tæt på ligevægt, mens man ved større afstanden vil gøre brug af \textsf{Morsepotentialet}. Disse to potentialer kan ses med det reelle eksperimentelt fundne potential på \cref{fig:Q20_ParabelOgMorsePotentiale}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=.6\textwidth]{Q20/images/MorsePotentialComparisonWithOtherPotentials.PNG}
+    \caption{Sammenligning af parabel og morsepotentiale med det reelle potential.}
+    \label{fig:Q20_ParabelOgMorsePotentiale}
+\end{figure}
+
+Morsepotentialet er givet ved
+\begin{align}
+    E_\text{pot}(R) &= E_B\left[1-\exp{-a\left(R - R_e\right)}\right]^2 \: .
+\end{align}
+Indsættes Morsepotentialet i Schrödingerligningen fås energi(-egenværdierne)
+\begin{align}
+    E_\text{vib}(v) &= \hbar\omega\left(v + \frac{1}{2}\right) - \frac{\hbar^2\omega^2}{4E_D}\left(v + \frac{1}{2}\right)^2 \: ,
+\end{align}
+hvilke har energiforskellen
+\begin{align}
+    \Delta E (v) &= \hbar\omega \left[1 - \frac{\hbar\omega}{2E_B}(v + 1)\right] \: ,
+\end{align}
+hvor $E_B$ er bindingsenergien for molekylet, og $E_D$ er \textsf{dissociationsenergien}, altså energien som skal tilføres molekylet, for at det ikke kan binde men splitter sig i de to atomer. Det kan ses at energiniveauerne i Morsepotentialet bliver tættere og tættere med voksende afstand mellem atomerne. Hvis atomerne kommer langt nok væk fra hinanden, så bliver energien høj nok til at molekylet ikke kan binde.
+
+Sammenligningen mellem parabel- og Morsepotentialet kan ses af \cref{fig:Q20_AfstandMellemEnerginiveauer}.
 
 \begin{figure}[!h]
     \centering
